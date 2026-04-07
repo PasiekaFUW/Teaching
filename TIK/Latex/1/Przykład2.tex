@@ -1,0 +1,93 @@
+\documentclass[a4paper,11pt,twocolumn]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenc} % poza overleaf wymagane
+\usepackage{polski} % polskie znaki
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{ragged2e} % for \justify
+\usepackage{listings}
+
+\title{Notatka Latex}
+\author{Moje imię i nazwisko}
+\date{12 Marca 2026}
+
+\begin{document}
+
+\twocolumn[
+  \maketitle
+  \vspace*{-5em}
+  \section*{}
+  \centering
+  
+    \begin{minipage}{0.88\textwidth}  % Adjust the width as needed (e.g., 0.8\textwidth)
+      \justify
+      Przykładowe streszczenie poza trybem dwukolumnowym.
+      The study of magnetic domains in data carriers was conducted, leading to a deeper understanding of Atomic Force Microscopy (AFM) principles and greater familiarity with the Magnetic Force Microscopy (MFM) method. 
+    \end{minipage}
+  
+  \vspace*{2em}
+]
+
+\section{Podstawowe elementy}
+\begin{itemize}
+        % \centering
+        \item \textbf{section\{...\}}, \textbf{subsection\{...\}},  \textbf{subsubsection\{...\}}, \textbf{*section\{...\}} - tworzą odpowiednio sekcje, podsekcje oraz sekcje nienumerowaną.
+        \item \textbf{itemize}, \textbf{enumerate} - tworzą listy punktowane i~numerowane. Rozpoczyna się je od \textbf{begin} i kończy \textbf{end}. Każdy element musi być poprzedzony poleceniem \textbf{item}.
+        \item \textbf{flushleft}, \textbf{flushright}, \textbf{center} lub \textbf{centering} - wyrównują tekst odpowiednio do lewej, prawej lub do środka. Różnica między nimi polega na tym, że pierwsze trzy są środowiskami (rozpoczynają się od \textbf{begin} i kończą \textbf{end}), podczas gdy \textbf{centering} jest poleceniem, które można użyć w dowolnym miejscu w dokumencie.
+\end{itemize}
+
+\section{Równania}
+\subsection{Przykładowe}
+\begin{equation}
+    w(z) = w_0 \sqrt{1+ M^2(\frac{z-z_0}{z_R})^2}
+\end{equation}
+
+\section{Tabele}
+\subsection{Przykładowa}
+
+
+\begin{table}[htp]
+  \centering
+  \caption{Podpis na górze}
+  \label{tab:nazwaTabeli}
+  \scalebox{1.0}{
+  \begin{tabular}{ccc}
+    \toprule
+    \textbf{$z_0$ [mm]} & \textbf{$w_0$ [mm]} & \textbf{$M^2$ [-]} \\
+    \midrule
+    $552.627 \pm 0.047$ & $0.0115 \pm 0.0086$ & $ 2.0 \pm 3.0$  \\
+    \bottomrule
+  \end{tabular}}
+\end{table}
+
+
+
+\section{Obrazy}
+\subsection{Przykładowa grafika}
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=0.4\textwidth]{stsci-01gnymeg4ym0ksh1x63g894t6h.png}
+    \caption{Podpis pod obrazem}
+    \label{fig:nazwaObrazu}
+\end{figure}
+
+\section{Lista}
+\subsection{Przykładowa lista Linux}
+\begin{lstlisting}[language=bash, caption={Przykładowa lista poleceń Linux}, label={lst:linux}]
+
+#!/bin/bash
+
+# 1. communication
+echo "this is a script"
+
+
+\end{lstlisting}
+
+\begin{thebibliography}{}
+
+    \bibitem{Klucz}
+    \href{}{Nazwisko Imię, \textit{Tytuł italic}, wydawnictwo, rok.}
+
+\end{thebibliography}
+
+\end{document}
