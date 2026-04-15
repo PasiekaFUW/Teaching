@@ -1,0 +1,2802 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[    119567,       2794]
+NotebookOptionsPosition[    100953,       2536]
+NotebookOutlinePosition[    101378,       2553]
+CellTagsIndexPosition[    101335,       2550]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\[CapitalCAcute]wiczenia Mathematica 2", "Title",
+ CellFrame->{{0, 0}, {0, 3}},
+ CellFrameColor->GrayLevel[0.75],
+ CellChangeTimes->{{3.3882697155752163`*^9, 3.388269730242085*^9}, {
+  3.984540924463324*^9, 3.984540972925791*^9}, {3.984541012377449*^9, 
+  3.9845410133374977`*^9}, {3.984717221810581*^9, 
+  3.984717222256768*^9}},ExpressionUUID->"5cbf03e8-3f5a-4a05-b82d-\
+5e518fd3e356"],
+
+Cell["\<\
+Jakub Mo\:015bcicki - na podstawie kursu Ruth Dover, Illinois Mathematics and \
+Science Academy, Emeritus \[OpenCurlyDoubleQuote]Introduction to Mathematica \
+for Students and Teachers\[CloseCurlyDoubleQuote] - rozdzia\[LSlash]y 5-9.
+\
+\>", "Author",
+ CellChangeTimes->{{3.388269767875836*^9, 3.3882697859411087`*^9}, {
+   3.407371706824852*^9, 3.407371710166232*^9}, {3.753138685848378*^9, 
+   3.753138688963779*^9}, 3.783101071578251*^9, {3.9845410024894238`*^9, 
+   3.984541049301791*^9}, 3.98454112203603*^9, {3.984541176200646*^9, 
+   3.98454117748127*^9}, 3.984541242882432*^9, 3.984541312073682*^9, 
+   3.984543941543997*^9, {3.984551111797347*^9, 3.9845511119330378`*^9}, {
+   3.984558850585031*^9, 3.984558855111381*^9}, {3.984717227786422*^9, 
+   3.984717232234152*^9}, {3.984717265787031*^9, 3.98471732392067*^9}, {
+   3.9847189161835613`*^9, 
+   3.9847189191025343`*^9}},ExpressionUUID->"0da5cdef-f2d9-482b-950a-\
+6c91ef2fc2a5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Rozdzia\[LSlash] 5 - \[OpenCurlyDoubleQuote]Plotting\
+\[CloseCurlyDoubleQuote]", "Title",
+ CellFrame->{{0, 0}, {0, 3}},
+ CellFrameColor->GrayLevel[0.75],
+ CellChangeTimes->{{3.984541292590104*^9, 3.984541324546485*^9}, {
+  3.984717327520495*^9, 3.984717334673388*^9}, {3.984718913327278*^9, 
+  3.984718913655542*^9}},ExpressionUUID->"f498c615-bff3-4d6e-896b-\
+603833f681e8"],
+
+Cell[CellGroupData[{
+
+Cell["Podstawowe wykresy", "Section",
+ CellChangeTimes->{{3.3883567097374268`*^9, 3.3883567133633966`*^9}, {
+  3.783189552061651*^9, 3.783189552606114*^9}, {3.9847178413856487`*^9, 
+  3.984717844848481*^9}},ExpressionUUID->"6cba7b18-0de9-4000-a304-\
+c1d865cdefdb"],
+
+Cell["\<\
+Grafika w programie Mathematica\[RegisteredTrademark] jest niesamowita! Ten \
+samouczek pomo\:017ce Ci zacz\:0105\[CAcute]\[NonBreakingSpace]z ni\:0105 \
+pracowa\[CAcute]!\
+\>", "Text",
+ CellChangeTimes->{{3.388356717716939*^9, 3.3883567189119377`*^9}, {
+   3.3883567781585817`*^9, 3.388356809244809*^9}, 3.407800156920882*^9, {
+   3.783189658217992*^9, 3.783189662008963*^9}, 3.783701609010646*^9, 
+   3.9847178593349648`*^9, {3.984720383297431*^9, 
+   3.9847203915299587`*^9}},ExpressionUUID->"58a23d34-f1a7-4d7e-b403-\
+ac2d050e807f"],
+
+Cell["\<\
+Poni\:017cszy kod s\[LSlash]u\:017cy do wygenerowania wykresu funkcji f(x) = \
+x sin(2x) dla -1 \[LessEqual] x \[LessEqual] 5 (ponownie \
+zwr\[OAcute]\[CAcute] uwag\:0119 na spacj\:0119 mi\:0119dzy x a Sin[2x], kt\
+\[OAcute]ra oznacza mno\:017cenie. W przeciwnym razie zosta\[LSlash]oby to \
+odczytane jako jedna zmienna o czteroliterowej nazwie xSin):\
+\>", "Text",
+ CellChangeTimes->{{3.388356802763011*^9, 3.3883569507803926`*^9}, {
+   3.407800183904292*^9, 3.4078002044064817`*^9}, {3.597187093213221*^9, 
+   3.597187098669157*^9}, {3.691965732499906*^9, 3.691965733271472*^9}, {
+   3.783189596594451*^9, 3.7831895975301456`*^9}, {3.7831897061466703`*^9, 
+   3.783189905605798*^9}, {3.783190600940188*^9, 3.78319060206686*^9}, {
+   3.783701613745549*^9, 3.783701648961856*^9}, 
+   3.9847178681028767`*^9},ExpressionUUID->"cc30dfb0-3e76-426e-8f9b-\
+b2f1761a8463"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"x", " ", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"2", "x"}], "]"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "5"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.3883569548398657`*^9, 
+  3.388356976417266*^9}},ExpressionUUID->"eb1b6211-f537-4870-aa4b-\
+9ded7ce86a2d"],
+
+Cell["\<\
+Zakres jest dobierany automatycznie, aby ukaza\[CAcute] najwa\:017cniejsze \
+cechy wykresu, ale u\:017cytkownik mo\:017ce go kontrolowa\[CAcute], podobnie \
+jak wiele innych opcji. Poni\:017cej podano kilka przyk\[LSlash]ad\[OAcute]w. \
+Przyjrzyj si\:0119 ka\:017cdemu z nich uwa\:017cnie. Najpierw podana jest \
+funkcja, a nast\:0119pnie nawiasy klamrowe okre\:015blaj\:0105ce dziedzin\
+\:0119. Nast\:0119pnie mo\:017cna poda\[CAcute] opcje w dowolnej \
+kolejno\:015bci. Nale\:017cy zwraca\[CAcute] uwag\:0119 na liczne strza\
+\[LSlash]ki, nawiasy, wielkie litery i przecinki. Zrozumienie tego systemu \
+znacznie u\[LSlash]atwi dodawanie r\[OAcute]\:017cnorodnych opcji:\
+\>", "Text",
+ CellChangeTimes->{{3.388357004680642*^9, 3.388357142131144*^9}, {
+   3.407800235316968*^9, 3.407800274894767*^9}, {3.407800371545268*^9, 
+   3.407800411373003*^9}, {3.783189598040462*^9, 3.783189601656706*^9}, {
+   3.783189916613947*^9, 3.7831899326702137`*^9}, {3.783190621099309*^9, 
+   3.7831906213391447`*^9}, 
+   3.984717881302067*^9},ExpressionUUID->"098b4b8a-1003-4a94-83a6-\
+567c69f3b68f"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"x", " ", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"2", "x"}], "]"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "5"}], "}"}], ",", " ", 
+   RowBox[{"PlotRange", "\[Rule]", "5"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.388357175194504*^9, 3.388357209426455*^9}, 
+   3.3883573711033173`*^9},ExpressionUUID->"6e54989c-2377-404f-a1d3-\
+f22ea1fc5131"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"x", " ", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"2", "x"}], "]"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "5"}], "}"}], ",", " ", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", "3"}], ",", " ", "8"}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.388357175194504*^9, 3.388357209426455*^9}, {
+  3.3883573711033173`*^9, 
+  3.38835739259042*^9}},ExpressionUUID->"bd48708e-d7da-4dd5-92b2-\
+4f0117c70607"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"x", " ", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"2", "x"}], "]"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "5"}], "}"}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", "Red"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.388357215768436*^9, 3.388357251603396*^9}, {
+  3.388357318072712*^9, 3.388357336904751*^9}, {3.388357466213427*^9, 
+  3.3883574667271767`*^9}},ExpressionUUID->"8890d708-afaf-4512-ad16-\
+c70e78bcf471"],
+
+Cell[TextData[{
+ "Opcje",
+ StyleBox[" ",
+  FontWeight->"Bold"],
+ StyleBox[ButtonBox["Dashed",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Dashed"],
+  FontWeight->"Bold"],
+ " i ",
+ StyleBox[ButtonBox["Thick",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Thick"],
+  FontWeight->"Bold"],
+ " maj\:0105 przypisane warto\:015bci domy\:015blne, ale mo\:017cna nimi \
+sterowa\[CAcute]:"
+}], "Text",
+ CellChangeTimes->{{3.3883577109893303`*^9, 3.3883577848329973`*^9}, {
+  3.783189940565958*^9, 3.783189946534871*^9}, {3.984717893046077*^9, 
+  3.9847179401207943`*^9}},ExpressionUUID->"c8bff6a6-457e-4ab1-bcce-\
+56f3093b2bdd"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"x", " ", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"2", "x"}], "]"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "5"}], "}"}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Dashed", ",", " ", "Thick"}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.388357215768436*^9, 3.388357251603396*^9}, {
+  3.388357318072712*^9, 3.388357321141975*^9}, {3.3883576748013144`*^9, 
+  3.388357696080802*^9}, {3.473012098574991*^9, 
+  3.473012106067004*^9}},ExpressionUUID->"6d9785a5-45b2-4b5e-8196-\
+278fbc8d4563"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"x", " ", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"2", "x"}], "]"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "5"}], "}"}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Dashing", "[", 
+       RowBox[{"{", ".05", "}"}], "]"}], ",", " ", 
+      RowBox[{"Thickness", "[", ".03", "]"}]}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.388357215768436*^9, 3.388357251603396*^9}, {
+  3.388357318072712*^9, 3.388357321141975*^9}, {3.3883576748013144`*^9, 
+  3.388357696080802*^9}},ExpressionUUID->"eadc7ed0-4b91-4868-83f3-\
+594f44cc15ff"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"x", " ", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"2", "x"}], "]"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "5"}], "}"}], ",", 
+   RowBox[{"AspectRatio", " ", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"Ticks", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\[Pi]", "/", "2"}], ",", " ", "\[Pi]", ",", " ", 
+        RowBox[{"3", 
+         RowBox[{"\[Pi]", "/", "2"}]}]}], "}"}], ",", " ", "Automatic"}], 
+     "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.388357215768436*^9, 3.388357251603396*^9}, {
+  3.388357318072712*^9, 3.388357336904751*^9}, {3.388357484597464*^9, 
+  3.388357530960346*^9}},ExpressionUUID->"4947a2bf-6c81-4c8c-a0e9-\
+8ce72f05e346"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"x", " ", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"2", "x"}], "]"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "5"}], "}"}], ",", 
+   RowBox[{
+   "PlotLabel", 
+    "\[Rule]", "\"\<\[Florin](\!\(\*StyleBox[\"x\",FontSlant->\"Italic\"]\)) \
+= \!\(\*StyleBox[\"x\",FontSlant->\"Italic\"]\) \
+sin(2\!\(\*StyleBox[\"x\",FontSlant->\"Italic\"]\))\>\""}]}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.388357215768436*^9, 3.388357251603396*^9}, {
+   3.388357318072712*^9, 3.388357336904751*^9}, {3.388357484597464*^9, 
+   3.388357615182239*^9}, 
+   3.407800442596244*^9},ExpressionUUID->"a7458e42-5e22-4245-bcee-\
+529f2546efbe"],
+
+Cell["\<\
+tw\[OAcute]rz jeden w\[LSlash]asny wykres. Nast\:0119pnie wprowad\:017a kilka \
+zmian. Poeksperymentuj troch\:0119.\
+\>", "Text",
+ CellChangeTimes->{{3.388357637020137*^9, 3.388357657042111*^9}, {
+   3.388357796412331*^9, 3.388357799638042*^9}, {3.783189602121073*^9, 
+   3.783189603008782*^9}, 
+   3.984717949955545*^9},ExpressionUUID->"aef6c94a-c64c-4c74-861e-\
+17331f9e408e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Pomocy!", "Section",
+ CellChangeTimes->{{3.3883578269569273`*^9, 3.3883578283725348`*^9}, {
+  3.984717991275872*^9, 
+  3.984717994655609*^9}},ExpressionUUID->"329940c4-35d4-4b93-8ad3-\
+e75cc78417ae"],
+
+Cell["\<\
+To jasne, \:017ce w j\:0119zyku Wolfram Language\[Trademark] jest \
+mn\[OAcute]stwo polece\:0144 i opcji. I oczywi\:015bcie nie spos\[OAcute]b \
+ich wszystkich zapami\:0119ta\[CAcute]. Na szcz\:0119\:015bcie Mathematica \
+oferuje obszern\:0105 pomoc. By\[CAcute] mo\:017ce ju\:017c to \
+widzia\[LSlash]e\:015b lub wypr\[OAcute]bowa\[LSlash]e\:015b, ale w nowej kom\
+\[OAcute]rce zacznij wpisywa\[CAcute] s\[LSlash]owo \:201ePlot\
+\[CloseCurlyDoubleQuote], wpisuj\:0105c zaledwie \:201ePl\
+\[CloseCurlyDoubleQuote]. Zatrzymaj si\:0119 na chwil\:0119. Te dwie litery \
+pozwol\:0105 Ci zobaczy\[CAcute] wszystkie polecenia, kt\[OAcute]re si\:0119 \
+od nich zaczynaj\:0105. Klikni\:0119cie pola z dwiema strza\[LSlash]kami w d\
+\[OAcute]\[LSlash] wy\:015bwietli wi\:0119cej polece\:0144.\
+\>", "Text",
+ CellChangeTimes->{{3.388357836459916*^9, 3.388357876104772*^9}, {
+   3.388357919781598*^9, 3.3883580054147663`*^9}, 3.38835872121528*^9, 
+   3.407800473657509*^9, 3.4078005892185173`*^9, {3.628637216955305*^9, 
+   3.628637254154347*^9}, {3.6286372868053217`*^9, 3.62863734909249*^9}, {
+   3.628637383585486*^9, 3.62863741785927*^9}, {3.6286374962475758`*^9, 
+   3.6286375587850637`*^9}, {3.764538830627232*^9, 3.764538835002459*^9}, 
+   3.783189603553248*^9, {3.783189959511999*^9, 3.783189994967629*^9}, 
+   3.984718117714863*^9},ExpressionUUID->"2d881a5a-db1a-4d11-b9a0-\
+7e965a104212"],
+
+Cell["\<\
+Teraz wybierz Plot z listy. Kliknij ponownie dwie strza\[LSlash]ki w d\
+\[OAcute]\[LSlash]. Tym razem zobaczysz podstawow\:0105 \
+sk\[LSlash]adni\:0119. Wybierz pierwsz\:0105 funkcj\:0119 (dla jednego \
+wykresu), a pojawi si\:0119 szablon. Super!\
+\>", "Text",
+ CellChangeTimes->{{3.628637612054846*^9, 3.628637622487043*^9}, {
+   3.6286376636622972`*^9, 3.628637681051309*^9}, {3.6286377438897448`*^9, 
+   3.6286378841272907`*^9}, {3.76453889023077*^9, 3.764538890758561*^9}, {
+   3.783190006015533*^9, 3.783190016950631*^9}, {3.783190660132419*^9, 
+   3.783190666324555*^9}, {3.78370172005239*^9, 3.783701726087757*^9}, 
+   3.984718125832797*^9},ExpressionUUID->"5f34283e-66c6-4bfc-8b5f-\
+407f07e43985"],
+
+Cell["\<\
+To oczywi\:015bcie bywa bardzo pomocne. Spr\[OAcute]buj wpisa\[CAcute] tylko \
+dwie pierwsze litery kilku innych polece\:0144.\
+\>", "Text",
+ CellChangeTimes->{{3.38835805003852*^9, 3.388358072414225*^9}, {
+   3.388358105274103*^9, 3.388358113491329*^9}, {3.628637907561154*^9, 
+   3.628637918894449*^9}, 3.7831896044176397`*^9, 
+   3.984718133514065*^9},ExpressionUUID->"6122e210-313b-4696-b7fb-\
+b96138174d5e"],
+
+Cell["A co z dost\:0119pnymi opcjami?", "Text",
+ CellChangeTimes->{{3.388358125849943*^9, 3.388358130686263*^9}, {
+   3.628637927663309*^9, 3.6286379292631063`*^9}, 
+   3.984718140801695*^9},ExpressionUUID->"83381f8c-018c-4636-9cd4-\
+618aedfca9d2"],
+
+Cell[BoxData[
+ RowBox[{"Options", "[", "Plot", "]"}]], "Input",
+ CellChangeTimes->{{3.388358132027268*^9, 
+  3.388358135247789*^9}},ExpressionUUID->"77c6c2d3-427c-453d-9ae0-\
+a43bd586eca0"],
+
+Cell["\<\
+Wow! Przeczytaj t\:0119 list\:0119 uwa\:017cnie. W ka\:017cdym przypadku \
+pokazana jest domy\:015blna warto\:015b\[CAcute] dla poszczeg\[OAcute]lnej \
+opcji.\
+\>", "Text",
+ CellChangeTimes->{{3.3883581880756617`*^9, 3.3883582293259974`*^9}, 
+   3.7831896049371347`*^9, 3.783701739267623*^9, 
+   3.9847181485773783`*^9},ExpressionUUID->"feebe054-7bdd-421c-b610-\
+12423fd1b883"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Wi\:0119cej wykres\[OAcute]w", "Section",
+ CellChangeTimes->{{3.3883584464776897`*^9, 3.3883584583449593`*^9}, {
+  3.7831895569500227`*^9, 3.783189557438221*^9}, {3.984718156428787*^9, 
+  3.984718162540633*^9}},ExpressionUUID->"51650f9b-1a0d-4044-8485-\
+d261060998d8"],
+
+Cell["\<\
+Aby narysowa\[CAcute] dwie lub wi\:0119cej funkcji na jednym wykresie, utw\
+\[OAcute]rz z nich list\:0119:\
+\>", "Text",
+ CellChangeTimes->{{3.388358490532967*^9, 3.3883585180873117`*^9}, 
+   3.3883585654928923`*^9, 3.764538981615531*^9, {3.783190040305408*^9, 
+   3.7831900408562603`*^9}, 
+   3.984718169249003*^9},ExpressionUUID->"6f43c5bf-7373-418f-8ded-\
+0d0b1c89266c"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"2", "x"}], "]"}]}], ",", " ", 
+     RowBox[{
+      SuperscriptBox["x", "3"], "-", 
+      RowBox[{"3", "x"}], "+", "1"}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "4"}], ",", " ", "4"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.3883586457874517`*^9, 
+  3.3883586908901253`*^9}},ExpressionUUID->"3310ddaf-669c-4246-bc20-\
+48189213343a"],
+
+Cell["\<\
+Zwr\[OAcute]\[CAcute] uwag\:0119, \:017ce domy\:015blnie Mathematica rysuje \
+wykresy w dw\[OAcute]ch r\[OAcute]\:017cnych, stonowanych kolorach. Czasami \
+to wystarczy, ale mo\:017cesz te\:017c chcie\[CAcute] mie\[CAcute] nad tym wi\
+\:0119ksz\:0105 kontrol\:0119:\
+\>", "Text",
+ CellChangeTimes->{{3.388358759444785*^9, 3.3883588300509*^9}, {
+   3.388358904235236*^9, 3.388358905258038*^9}, 3.407800633005312*^9, {
+   3.783190046407735*^9, 3.78319004723244*^9}, 
+   3.984718175904858*^9},ExpressionUUID->"a1e335eb-0030-4455-b112-\
+fd373cf23aac"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"2", "x"}], "]"}]}], ",", " ", 
+     RowBox[{
+      SuperscriptBox["x", "3"], "-", 
+      RowBox[{"3", "x"}], "+", "1"}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "4"}], ",", " ", "4"}], "}"}], ",", " ", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Red", ",", " ", "Blue"}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.3883586457874517`*^9, 3.3883586908901253`*^9}, {
+  3.388358838624921*^9, 3.3883588490325117`*^9}, {3.388358880878338*^9, 
+  3.388358892799512*^9}},ExpressionUUID->"011beac5-20af-4f6b-afe4-\
+9c7ec86e0d2d"],
+
+Cell["\<\
+Aby przypisa\[CAcute] wi\:0119cej styl\[OAcute]w do poszczeg\[OAcute]lnych \
+wykres\[OAcute]w, potrzebujemy listy sk\[LSlash]adaj\:0105cej si\:0119 z list:\
+\>", "Text",
+ CellChangeTimes->{{3.3883589757341022`*^9, 3.388358991100573*^9}, {
+   3.783190050768293*^9, 3.7831900511921053`*^9}, 
+   3.984718183272637*^9},ExpressionUUID->"a4968a16-c72b-4322-b11c-\
+1e694ba2ea57"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"2", "x"}], "]"}]}], ",", " ", 
+     RowBox[{
+      SuperscriptBox["x", "3"], "-", 
+      RowBox[{"3", "x"}], "+", "1"}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "4"}], ",", " ", "4"}], "}"}], ",", " ", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"Red", ",", " ", "Thick"}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"Blue", ",", " ", "Dashed", ",", " ", "Thick"}], "}"}]}], 
+     "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.3883586457874517`*^9, 3.3883586908901253`*^9}, {
+  3.388358838624921*^9, 3.3883588490325117`*^9}, {3.388358880878338*^9, 
+  3.388358892799512*^9}, {3.38835899369871*^9, 
+  3.388359030048305*^9}},ExpressionUUID->"e741ce0e-c8dc-486f-bc77-\
+db815cf605e3"],
+
+Cell["\<\
+Jak wspomniano wcze\:015bniej, mo\:017cesz kontrolowa\[CAcute] grubo\:015b\
+\[CAcute] i rozmiar przerywanych linii. Ale czasami po prostu wpisanie Thick \
+(pogrubiona) i Dashed (przerywana) jest wystarczaj\:0105co dobre!\
+\>", "Text",
+ CellChangeTimes->{{3.407800701387308*^9, 3.407800729924055*^9}, {
+   3.40780132888588*^9, 3.407801352242639*^9}, {3.4730122658142757`*^9, 
+   3.4730122675947847`*^9}, 3.783189605777067*^9, {3.7831900551608057`*^9, 
+   3.783190055418428*^9}, {3.783190704460966*^9, 3.783190717877681*^9}, 
+   3.984718190153054*^9},ExpressionUUID->"a3e57769-1587-4796-9071-\
+83be44188e6f"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"2", "x"}], "]"}]}], ",", " ", 
+     RowBox[{
+      SuperscriptBox["x", "3"], "-", 
+      RowBox[{"3", "x"}], "+", "1"}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "4"}], ",", " ", "4"}], "}"}], ",", " ", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"Red", ",", " ", 
+        RowBox[{"Thickness", "[", ".003", "]"}]}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"Blue", ",", " ", 
+        RowBox[{"Dashing", "[", 
+         RowBox[{"{", 
+          RowBox[{".05", ",", " ", ".02"}], "}"}], "]"}], ",", " ", 
+        RowBox[{"Thickness", "[", ".01", "]"}]}], "}"}]}], "}"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.407800746454384*^9, 
+  3.407800830491767*^9}},ExpressionUUID->"cc5b05a7-2287-4e91-ae23-\
+872124d89187"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Kolory", "Section",
+ CellChangeTimes->{{3.407800892722796*^9, 3.407800893492485*^9}, {
+  3.984718928775182*^9, 
+  3.9847189309753313`*^9}},ExpressionUUID->"84630a73-c111-4c33-a1a7-\
+b5294403f785"],
+
+Cell[TextData[{
+ "U\:017cyli\:015bmy ju\:017c pewnych kolor\[OAcute]w, takich jak ",
+ StyleBox[ButtonBox["Red",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Red"],
+  FontWeight->"Bold"],
+ " and ",
+ StyleBox[ButtonBox["Blue",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Blue"],
+  FontWeight->"Bold"],
+ " \[Dash] Wolfram Language\[Trademark] rozumie te oraz wiele innych. (Aby \
+zobaczy\[CAcute], jakie kolory rozpoznaje Mathematica, z menu Palettes \
+wybierz ColorSchemes. W sekcji Named przejrzyj kolory znajduj\:0105ce \
+si\:0119 w zak\[LSlash]adce System)."
+}], "Text",
+ CellChangeTimes->{{3.407800907190322*^9, 3.4078009380009117`*^9}, {
+   3.40780105219975*^9, 3.407801053514279*^9}, {3.407801374296132*^9, 
+   3.4078014140147457`*^9}, {3.40780144491393*^9, 3.407801474015253*^9}, 
+   3.4712175822068*^9, {3.597269476446116*^9, 3.5972694777275476`*^9}, 
+   3.5972695304046297`*^9, {3.6286381867909737`*^9, 3.62863818907684*^9}, {
+   3.764542843381208*^9, 3.764542848690723*^9}, 3.783189606240795*^9, {
+   3.783190064003067*^9, 3.783190083842494*^9}, 3.78319072967128*^9, {
+   3.984718217904366*^9, 
+   3.984718260116008*^9}},ExpressionUUID->"0b82d5e1-c683-453e-bb3b-\
+8c4e1e0ba18a"],
+
+Cell["\<\
+Kolory mo\:017cna dobiera\[CAcute] na inne sposoby. RGB oznacza Red \
+(czerwony), Green (zielony), Blue (niebieski) i wymaga podania trzech liczb z \
+przedzia\[LSlash]u od 0 do 1 w\[LSlash]\:0105cznie. Wypr\[OAcute]buj kilka r\
+\[OAcute]\:017cnych liczb:\
+\>", "Text",
+ CellChangeTimes->{{3.4078014927777653`*^9, 3.407801511223296*^9}, {
+   3.4078016433394127`*^9, 3.4078016919278183`*^9}, {3.407801734021319*^9, 
+   3.4078017436419363`*^9}, 3.783189607096883*^9, {3.7831900868814783`*^9, 
+   3.783190109130948*^9}, 3.984718225759432*^9, 
+   3.984718267804199*^9},ExpressionUUID->"8240a369-addb-46c9-9308-\
+c6dc4699c3f6"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"x", " ", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"2", "x"}], "]"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "0", ",", " ", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Thick", ",", " ", 
+      RowBox[{"RGBColor", "[", 
+       RowBox[{"1", ",", "0", ",", "0"}], "]"}]}], "}"}]}]}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.407801516822982*^9, 3.407801636272451*^9}, {
+  3.407801722347958*^9, 
+  3.4078017489474697`*^9}},ExpressionUUID->"b173feb4-4842-41d6-9f06-\
+5d2caf46dd28"],
+
+Cell[TextData[{
+ "Inn\:0105 opcj\:0105 jest ",
+ Cell[BoxData[
+  RowBox[{"Hue", "[", "k", "]"}]], "Input",ExpressionUUID->
+  "302ee0ac-1ea6-476d-bdc2-bdd61e77f2e1"],
+ ", gdzie ",
+ Cell[BoxData[
+ "k"], "Input",ExpressionUUID->"0f679af1-307e-434d-95d2-381552cca520"],
+ " jest liczb\:0105 mi\:0119dzy 0 a 1. Przetestuj inne warto\:015bci ",
+ Cell[BoxData[
+ "k"], "Input",ExpressionUUID->"e1f921d8-1cd8-485f-949a-1796e32615cf"],
+ ", pami\:0119taj\:0105c o swojej t\:0119czy:"
+}], "Text",
+ CellChangeTimes->{{3.407801755898991*^9, 3.40780178128039*^9}, {
+   3.407802045778717*^9, 3.407802046639368*^9}, {3.4078020819047747`*^9, 
+   3.4078021582749567`*^9}, 3.783189607697801*^9, {3.7831901156819353`*^9, 
+   3.783190161586875*^9}, {3.984718310537035*^9, 
+   3.984718370774557*^9}},ExpressionUUID->"d028c608-0009-4af4-92b8-\
+1b7f54751d55"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"x", " ", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"2", "x"}], "]"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "0", ",", " ", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Thick", ",", " ", 
+      RowBox[{"Hue", "[", "0", "]"}]}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.407801516822982*^9, 3.407801636272451*^9}, {
+  3.407801722347958*^9, 3.4078017489474697`*^9}, {3.407802168499537*^9, 
+  3.4078021784741373`*^9}},ExpressionUUID->"b20c9a84-7e03-4a47-9e88-\
+bf167944a86c"],
+
+Cell["Przetestuj wi\:0119cej mo\:017cliwo\:015bci z Palette, je\:015bli \
+chcesz!", "Text",
+ CellChangeTimes->{{3.7645390978753777`*^9, 3.764539111836503*^9}, {
+  3.9847184066716137`*^9, 
+  3.98471843861512*^9}},ExpressionUUID->"5dbea51d-8783-43cd-bde2-\
+0550488cacaf"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Asymptoty", "Section",
+ CellChangeTimes->{{3.407868855253057*^9, 3.407868874925004*^9}, 
+   3.407869035590996*^9, {3.407869934873888*^9, 3.40786993708639*^9}, {
+   3.984718445094842*^9, 
+   3.984718446918996*^9}},ExpressionUUID->"2ab8da3d-9446-4bd4-91e8-\
+1a71c04383db"],
+
+Cell[TextData[{
+ "Sp\[OAcute]jrz na podstawowy wykres - ",
+ StyleBox[ButtonBox["Plot",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Plot"],
+  FontWeight->"Bold"],
+ ". W nowszych wersjach j\:0119zyk Wolfram Language nauczy\[LSlash] si\:0119 \
+unika\[CAcute] wy\:015bwietlania pionowych asymptot, co jest cz\:0119stym \
+problemem w wielu innych programach:"
+}], "Text",
+ CellChangeTimes->{{3.407868889738783*^9, 3.407868902395938*^9}, {
+   3.407868961154357*^9, 3.407869009051955*^9}, {3.407869051560546*^9, 
+   3.407869086438538*^9}, {3.407869190976164*^9, 3.407869249368102*^9}, {
+   3.407869634235441*^9, 3.4078696556727962`*^9}, {3.4712178035376253`*^9, 
+   3.4712178232619143`*^9}, {3.69196627382806*^9, 3.6919663231308107`*^9}, {
+   3.691966366715604*^9, 3.691966374989682*^9}, {3.7645392562340603`*^9, 
+   3.764539341811075*^9}, {3.764542911005587*^9, 3.764542912479549*^9}, 
+   3.7831896084976807`*^9, {3.7831901691164427`*^9, 3.783190194636322*^9}, {
+   3.984718494230637*^9, 3.984718509792203*^9}, {3.9847185806812687`*^9, 
+   3.984718585637034*^9}},ExpressionUUID->"f51e92ec-c56c-45e8-9e89-\
+56fffa70dcd8"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"g", "[", "x_", "]"}], ":=", 
+  FractionBox["1", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"x", "-", "2"}], ")"}], 
+    RowBox[{"(", 
+     RowBox[{"x", "+", "1"}], ")"}]}]]}]], "Input",
+ CellChangeTimes->{{3.4078695507208*^9, 3.407869568149494*^9}, {
+  3.407869696718561*^9, 3.407869697176443*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"a6d6e4c8-0001-423d-a5b0-1564dc2f1b75"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"g", "[", "x", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "3"}], ",", " ", "4"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.407868898241647*^9, 3.407868950487164*^9}, {
+  3.407869565163279*^9, 3.4078695908777933`*^9}, {3.4078697053389606`*^9, 
+  3.407869705962469*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"106f6a38-4b02-44be-9363-eaac2efae0d4"],
+
+Cell["\<\
+Je\:015bli jednak lubisz asymptoty i chcesz zobaczy\[CAcute] co\:015b nieco \
+bardziej zaawansowanego, sprawd\:017a to:\
+\>", "Text",
+ CellChangeTimes->{{3.76454195679696*^9, 3.764542011776739*^9}, 
+   3.984718593688381*^9},ExpressionUUID->"215b9472-fe24-4d92-a188-\
+861a35daa330"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"g", "[", "x", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "3"}], ",", " ", "4"}], "}"}], ",", " ", 
+   RowBox[{"Epilog", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"Thick", ",", "Red", ",", " ", "Dashed", ",", 
+        RowBox[{"InfiniteLine", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "1"}], ",", "0"}], "}"}], ",", " ", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "1"}], ",", "1"}], "}"}]}], "}"}], "]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"Thick", ",", "Red", ",", " ", "Dashed", ",", 
+        RowBox[{"InfiniteLine", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"2", ",", " ", "0"}], "}"}], ",", " ", 
+           RowBox[{"{", 
+            RowBox[{"2", ",", "1"}], "}"}]}], "}"}], "]"}]}], "}"}]}], 
+     "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.764539811809743*^9, 3.7645398366159*^9}, {
+  3.7645398771502953`*^9, 3.764539923636262*^9}, {3.764539979943645*^9, 
+  3.764540055803927*^9}, {3.7645402751505213`*^9, 3.764540292879158*^9}, {
+  3.7645414476818867`*^9, 3.7645414767956448`*^9}, {3.764542018348612*^9, 
+  3.764542043209833*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"8f2146e2-7834-4b1d-9a6a-610aa212d60a"],
+
+Cell[TextData[{
+ "Polecenie ",
+ StyleBox[ButtonBox["InfiniteLine ",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/InfiniteLine"],
+  FontWeight->"Bold"],
+ "rysuje prost\:0105 przechodz\:0105c\:0105 przez dwa podane punkty, przed\
+\[LSlash]u\:017caj\:0105c j\:0105 a\:017c do kraw\:0119dzi okna wykresu."
+}], "Text",
+ CellChangeTimes->{{3.7645422486162024`*^9, 3.764542317399712*^9}, {
+  3.7645429654904327`*^9, 3.764542967740638*^9}, {3.783190201565237*^9, 
+  3.783190211583482*^9}, {3.783190763590086*^9, 3.783190765615261*^9}, {
+  3.984718604121401*^9, 
+  3.984718663611721*^9}},ExpressionUUID->"b2eb57e2-8d91-41b8-87b9-\
+e2f208b4de65"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Jeszcze dwie opcje (opcjonalnie)", "Section",
+ CellChangeTimes->{{3.4084912998381033`*^9, 3.408491300618737*^9}, {
+  3.4084916768150597`*^9, 3.408491687517568*^9}, {3.4084926372201633`*^9, 
+  3.408492642740755*^9}, {3.764543044005766*^9, 3.764543047470952*^9}, {
+  3.783189562766107*^9, 3.783189569006261*^9}, {3.984718454525517*^9, 
+  3.984718465190708*^9}},ExpressionUUID->"c942e739-bb39-4a6d-acf0-\
+916af8b85009"],
+
+Cell[CellGroupData[{
+
+Cell["Mesh", "Subsection",
+ CellChangeTimes->{{3.4084916998232317`*^9, 3.4084917004438334`*^9}, {
+  3.9847184691266003`*^9, 3.984718471758462*^9}, {3.984720775260705*^9, 
+  3.9847207759244947`*^9}},ExpressionUUID->"8db531fd-103a-4b7c-bb8d-\
+235f5d90ea10"],
+
+Cell[TextData[{
+ "Teraz sp\[OAcute]jrz na zwyk\[LSlash]y wykres z opcj\:0105 ",
+ StyleBox[ButtonBox["Mesh",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Mesh"],
+  FontWeight->"Bold"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.408491310093918*^9, 3.408491340978054*^9}, {
+  3.783190220802092*^9, 3.783190229729944*^9}, {3.9847184761647863`*^9, 
+  3.984718486766583*^9}},ExpressionUUID->"fabaf50c-e4b6-4cbd-93fc-\
+ff57049323e9"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", "x", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "0", ",", " ", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+   RowBox[{"Mesh", " ", "\[Rule]", "All"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.408491348512269*^9, 
+  3.4084913704425087`*^9}},ExpressionUUID->"c1c5ae65-6a7a-4809-96dd-\
+19eed3acaec5"],
+
+Cell["\<\
+Co to robi? Pokazuje wszystkie punkty, kt\[OAcute]re s\:0105 nanoszone, aby \
+utworzy\[CAcute] wykres. Reszta wykresu powstaje poprzez \
+po\[LSlash]\:0105czenie tych punkt\[OAcute]w za pomoc\:0105 prostych odcink\
+\[OAcute]w. Zwr\[OAcute]\[CAcute] uwag\:0119, \:017ce kalkulatory we \
+wszystkich przypadkach u\:017cywaj\:0105 punkt\[OAcute]w rozmieszczonych w r\
+\[OAcute]wnych odst\:0119pach, podczas gdy Mathematica sprytnie wstawia wi\
+\:0119cej punkt\[OAcute]w tam, gdzie funkcja jest bardziej zakrzywiona.\
+\>", "Text",
+ CellChangeTimes->{{3.408491415519753*^9, 3.408491435276649*^9}, {
+   3.408491476753777*^9, 3.408491605483265*^9}, 3.471217913103941*^9, {
+   3.783189609033122*^9, 3.783189609833695*^9}, {3.7831902335700703`*^9, 
+   3.783190256067339*^9}, 
+   3.9847186809360313`*^9},ExpressionUUID->"69f7191d-6de3-4123-b70d-\
+4e18459516c5"],
+
+Cell["\<\
+Opcji Mesh mo\:017cna u\:017cy\[CAcute] do wielu innych rzeczy. Poni\:017cszy \
+przyk\[LSlash]ad generuje 12 r\[OAcute]wnomiernie rozmieszczonych punkt\
+\[OAcute]w w dziedzinie (na osi X):\
+\>", "Text",
+ CellChangeTimes->{{3.408491612315933*^9, 3.408491621438025*^9}, {
+   3.4084916625556307`*^9, 3.408491663145121*^9}, {3.408491706742139*^9, 
+   3.4084917108510637`*^9}, {3.408491845307231*^9, 3.408491866062304*^9}, {
+   3.783190260731241*^9, 3.783190271411435*^9}, 
+   3.9847186904785213`*^9},ExpressionUUID->"c60fa3cf-4884-460c-b608-\
+80c8d4121383"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", "x", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "0", ",", " ", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+   RowBox[{"Mesh", " ", "\[Rule]", "12"}], ",", " ", 
+   RowBox[{"MeshStyle", "\[Rule]", 
+    RowBox[{"PointSize", "[", "Large", "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.408491348512269*^9, 3.4084913704425087`*^9}, {
+  3.408491825591773*^9, 3.408491833297999*^9}, {3.408491914471735*^9, 
+  3.408491956918519*^9}},ExpressionUUID->"c6bfc823-f911-47a9-9823-\
+efda273ea8ab"],
+
+Cell["\<\
+Aby uzyska\[CAcute] punkty rozmieszczone r\[OAcute]wnomiernie w \
+przeciwdziedzinie (na osi Y), u\:017cyj \:201eczystej\[CloseCurlyDoubleQuote] \
+funkcji (pure function), pokazanej na samym ko\:0144cu:\
+\>", "Text",
+ CellChangeTimes->{{3.4084920288917103`*^9, 3.408492062911277*^9}, {
+   3.691966656642446*^9, 3.691966689493088*^9}, {3.783190276067369*^9, 
+   3.783190276637233*^9}, 
+   3.984718697055565*^9},ExpressionUUID->"1c78482c-fd59-4ced-b217-\
+d0ae28cf0a3c"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   SuperscriptBox["\[ExponentialE]", "x"], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "0", ",", " ", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+   RowBox[{"Mesh", " ", "\[Rule]", "8"}], ",", " ", 
+   RowBox[{"MeshStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Red", ",", 
+      RowBox[{"PointSize", "[", "Medium", "]"}]}], "}"}]}], ",", " ", 
+   RowBox[{"MeshFunctions", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"#2", "&"}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.408491348512269*^9, 3.4084913704425087`*^9}, {
+   3.408491825591773*^9, 3.408491833297999*^9}, {3.408491914471735*^9, 
+   3.408491956918519*^9}, {3.4084921060853558`*^9, 3.4084921825419617`*^9}, 
+   3.408492344673723*^9},ExpressionUUID->"ebf4519e-0b60-4867-af17-\
+8030b809a0da"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["RegionFunction", "Subsection",
+ CellChangeTimes->{{3.408492258737028*^9, 
+  3.408492260739336*^9}},ExpressionUUID->"af62c270-e618-4739-9ba1-\
+9b0e297e7e55"],
+
+Cell["\<\
+Ta opcja pozwoli Ci umie\:015bci\[CAcute] na wykresie wybrane zakresy Twojej \
+funkcji:\
+\>", "Text",
+ CellChangeTimes->{{3.4084922872276793`*^9, 3.40849232233051*^9}, {
+  3.783190280851562*^9, 3.783190281836508*^9}, {3.984718708434881*^9, 
+  3.984718764273941*^9}},ExpressionUUID->"f4dac7d1-b060-4ef4-bbd8-\
+2acb2ff4f49c"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", "x", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "0", ",", " ", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}], ",", "  ", 
+   RowBox[{"RegionFunction", "\[Rule]", 
+    RowBox[{"Function", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x", ",", " ", "y"}], "}"}], ",", " ", 
+      RowBox[{
+       RowBox[{"Abs", "[", "y", "]"}], ">", ".3"}]}], "]"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.408491348512269*^9, 3.4084913704425087`*^9}, {
+  3.408491825591773*^9, 3.408491833297999*^9}, {3.408491914471735*^9, 
+  3.408491956918519*^9}, {3.4084921060853558`*^9, 3.4084921825419617`*^9}, {
+  3.408492328096265*^9, 
+  3.408492434792972*^9}},ExpressionUUID->"35314cd1-f63b-4d11-82d7-\
+68c28860dc03"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", "x", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "0", ",", " ", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}], ",", "  ", 
+   RowBox[{"RegionFunction", "\[Rule]", 
+    RowBox[{"Function", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x", ",", " ", "y"}], "}"}], ",", 
+      RowBox[{".3", "<", " ", 
+       RowBox[{"Abs", "[", "y", "]"}], "<", ".8"}]}], "]"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.408491348512269*^9, 3.4084913704425087`*^9}, {
+   3.408491825591773*^9, 3.408491833297999*^9}, {3.408491914471735*^9, 
+   3.408491956918519*^9}, {3.4084921060853558`*^9, 3.4084921825419617`*^9}, {
+   3.408492328096265*^9, 3.408492495854403*^9}, 
+   3.408492541130405*^9},ExpressionUUID->"53e47051-617b-467f-acd3-\
+c36e39a8bd19"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Palette (raz jeszcze)", "Section",
+ CellChangeTimes->{{3.471217971725068*^9, 3.471217980634853*^9}, {
+  3.783189573166417*^9, 3.7831895736490993`*^9}, {3.984718803504739*^9, 
+  3.984718808296694*^9}},ExpressionUUID->"57d00cee-afd5-48f5-ab7a-\
+1b53589036c1"],
+
+Cell["\<\
+W palecie, w sekcji Basic Commands (Podstawowe polecenia), znajd\:017a \
+przycisk 2D. Rozejrzyj si\:0119 troch\:0119. Do niekt\[OAcute]rych z tych \
+innych wykres\[OAcute]w powr\[OAcute]cimy bardziej \
+szczeg\[OAcute]\[LSlash]owo w p\[OAcute]\:017aniejszym czasie. Na razie \
+wybierz Plot. Wpisz wybran\:0105 przez siebie funkcj\:0119, a tak\:017ce \
+zmienn\:0105 oraz warto\:015bci minimalne i maksymalne. Teraz wybierz kilka \
+opcji i uzupe\[LSlash]nij odpowiednie pola. Zwr\[OAcute]\[CAcute] uwag\:0119 \
+na palet\:0119 kolor\[OAcute]w umieszczon\:0105 nieco ni\:017cej. Po prostu \
+kliknij kolor, gdy b\:0119dzie potrzebny.\
+\>", "Text",
+ CellChangeTimes->{{3.471217990894269*^9, 3.471218013711162*^9}, {
+   3.471218055585617*^9, 3.4712182046342173`*^9}, {3.471218239302453*^9, 
+   3.471218294118713*^9}, {3.597270241480451*^9, 3.5972702664561787`*^9}, {
+   3.597270347878561*^9, 3.597270352693049*^9}, {3.691967386020051*^9, 
+   3.6919674044607763`*^9}, {3.723931539858466*^9, 3.723931586688245*^9}, {
+   3.7831895811353683`*^9, 3.7831896132252407`*^9}, {3.783190286606213*^9, 
+   3.783190302052207*^9}, {3.7831903548385143`*^9, 3.7831903632134657`*^9}, 
+   3.98471880029156*^9},ExpressionUUID->"6fe1cf42-e6bd-4dad-981f-\
+f6e5e492d6b3"],
+
+Cell["\<\
+Obok sekcji opcji widnieje napis Automatic Positioning (Pozycjonowanie \
+automatyczne). Upewnij si\:0119, \:017ce zauwa\:017cy\[LSlash]e\:015b, co to \
+oznacza. (To bardzo przydatna funkcja!)\
+\>", "Text",
+ CellChangeTimes->{{3.4712183004130297`*^9, 3.4712183414009237`*^9}, 
+   3.7831896142889023`*^9, {3.7831903660374613`*^9, 3.7831903762457523`*^9}, 
+   3.984718816661393*^9},ExpressionUUID->"ac08d128-7ab0-4e34-b42a-\
+4d999806324c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\[CapitalCAcute]wiczenie", "Section",
+ CellChangeTimes->{{3.407802195355901*^9, 3.407802196822393*^9}, {
+  3.407802230315233*^9, 3.4078022330110083`*^9}, {3.764543131521402*^9, 
+  3.7645431335012197`*^9}, {3.984718824328762*^9, 
+  3.984718828712829*^9}},ExpressionUUID->"b15d5882-838e-49ff-937b-\
+0c2cffebd8cc"],
+
+Cell["\<\
+Niech f(x)=cos(x) i g(x)=1-x^2/2. Zdefiniuj obie te funkcje. Nast\:0119pnie \
+narysuj je razem na jednym wykresie, dodaj\:0105c kolory oraz pogrubienie lub \
+przerywane linie do ka\:017cdego z nich. Dodaj ramk\:0119 wok\[OAcute]\
+\[LSlash] wykresu i podpisz go \[OpenCurlyDoubleQuote]Przybli\:017cenia\
+\[CloseCurlyDoubleQuote] (lub u\:017cyj opcji opisu wykresu). Pami\:0119taj, \
+aby po zako\:0144czeniu pracy wyczy\:015bci\[CAcute] funkcje f i g za pomoc\
+\:0105 polecenia Clear.\
+\>", "Text",
+ CellChangeTimes->{{3.407802238975995*^9, 3.407802317575074*^9}, {
+   3.407802365650531*^9, 3.407802412116272*^9}, 3.597270047417733*^9, {
+   3.723931395108947*^9, 3.7239313969884243`*^9}, {3.7645431614243813`*^9, 
+   3.764543163505436*^9}, {3.783189614915259*^9, 3.783189616328673*^9}, {
+   3.783190386767446*^9, 3.783190455343441*^9}, {3.7837018610547543`*^9, 
+   3.78370186105486*^9}, 3.984718850109696*^9, {3.984718886680204*^9, 
+   3.984718888880172*^9}},ExpressionUUID->"238aeeec-6ca1-4c2a-b9a1-\
+fa187b7bc111"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Rozdzia\[LSlash] 7: \[OpenCurlyDoubleQuote]Manipulate\
+\[CloseCurlyDoubleQuote]", "Title",
+ CellChangeTimes->{{3.407454656146962*^9, 3.407454664557453*^9}, {
+  3.407454770841402*^9, 3.407454775623067*^9}, {3.984545864105565*^9, 
+  3.984545869427973*^9}, {3.98471734046408*^9, 3.98471734933609*^9}, {
+  3.984719218119845*^9, 
+  3.984719220610772*^9}},ExpressionUUID->"ad64e23a-f6de-4334-b0e0-\
+f93091d04475"],
+
+Cell[TextData[{
+ "Polecenie ",
+ StyleBox[ButtonBox["Manipulate",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Manipulate"],
+  FontWeight->"Bold"],
+ " by\[LSlash]o ca\[LSlash]kowicie now\:0105 komend\:0105 w wersji 6. Jest \
+naprawd\:0119 \:015bwietne. Sk\[LSlash]adnia opiera si\:0119 na tej samej \
+podstawowej strukturze, kt\[OAcute]ra zosta\[LSlash]a u\:017cyta do tworzenia \
+tabeli (Table). Uruchom polecenie i przesu\:0144 suwak. (Tak, zauwa\:017cysz \
+pewien problem!):"
+}], "Text",
+ CellChangeTimes->{{3.3883600470081177`*^9, 3.3883602105854177`*^9}, {
+   3.388360298625087*^9, 3.388360307985564*^9}, {3.388360358965921*^9, 
+   3.388360382642004*^9}, 3.407802588934236*^9, {3.4717903875831013`*^9, 
+   3.47179038836127*^9}, {3.691967451260818*^9, 3.691967451932961*^9}, {
+   3.783270015902071*^9, 3.7832701019193087`*^9}, {3.98471901856334*^9, 
+   3.984719037413958*^9}},ExpressionUUID->"f30b9e8d-6886-4fa0-9511-\
+588c8e764c11"],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", " ", 
+    RowBox[{
+     RowBox[{"Sin", "[", 
+      RowBox[{"n", " ", "x"}], "]"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", " ", "0", ",", " ", 
+       RowBox[{"2", "\[Pi]"}]}], "}"}]}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", " ", 
+     RowBox[{"-", "3"}], ",", " ", "3"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.388360029879092*^9, 3.388360040150154*^9}, {
+  3.388360214936906*^9, 
+  3.388360288046893*^9}},ExpressionUUID->"0f3fa754-790b-495d-9bc0-\
+8fafbadf498b"],
+
+Cell["\<\
+Prawie zawsze w animacji graficznej, nawet do\:015b\[CAcute] prostej, \
+konieczne jest dodanie opcji PlotRange wewn\:0105trz polecenia Plot. Wypr\
+\[OAcute]buj poni\:017csze polecenie. Nast\:0119pnie kliknij ma\[LSlash]y \
+znak \:201e+\[CloseCurlyDoubleQuote] po prawej stronie suwaka i \
+poeksperymentuj z elementami steruj\:0105cymi:\
+\>", "Text",
+ CellChangeTimes->{{3.388360391648543*^9, 3.388360459738234*^9}, {
+  3.388360495457103*^9, 3.388360566766057*^9}, {3.6599117476273527`*^9, 
+  3.659911749695389*^9}, {3.783270054601532*^9, 3.783270055320121*^9}, {
+  3.783270107669669*^9, 3.783270147615073*^9}, {3.783701928543798*^9, 
+  3.78370192875095*^9}, {3.984719054736813*^9, 
+  3.984719063710845*^9}},ExpressionUUID->"3a1e4af8-0827-4819-942b-\
+6fa8ce2a750e"],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", " ", 
+    RowBox[{
+     RowBox[{"Sin", "[", 
+      RowBox[{"n", " ", "x"}], "]"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", " ", "0", ",", " ", 
+       RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+     RowBox[{"PlotRange", "\[Rule]", "1.1"}]}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", " ", 
+     RowBox[{"-", "3"}], ",", " ", "3"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.388360029879092*^9, 3.388360040150154*^9}, {
+  3.388360214936906*^9, 3.388360288046893*^9}, {3.388360581253521*^9, 
+  3.388360598386235*^9}, {3.471790467493664*^9, 
+  3.4717904767459*^9}},ExpressionUUID->"52586169-13be-46f8-bbfc-ddf408c1a3f5"],
+
+Cell["\<\
+Zwr\[OAcute]\[CAcute] uwag\:0119, \:017ce Manipulate dzia\[LSlash]a \
+r\[OAcute]wnie\:017c z poleceniami algebraicznymi. Poni\:017cej wymusimy \
+rozmiar kroku na 1 w taki sam spos\[OAcute]b, w jaki wymuszali\:015bmy \
+rozmiar kroku dla tabel:\
+\>", "Text",
+ CellChangeTimes->{{3.388360847182129*^9, 3.388360878898761*^9}, {
+   3.388360914578528*^9, 3.388360923894952*^9}, {3.407802618576333*^9, 
+   3.4078026577304173`*^9}, {3.4078027134660053`*^9, 3.4078027153933353`*^9}, 
+   3.7832700560344563`*^9, {3.7832701530078382`*^9, 3.7832701645438128`*^9}, 
+   3.9847191234486303`*^9},ExpressionUUID->"c64106eb-eff2-4a21-a1c2-\
+12627ce2af40"],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Expand", "[", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"x", "+", "y"}], ")"}], "n"], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", " ", "1", ",", " ", "50", ",", " ", "1"}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.388360881667615*^9, 
+  3.388360910574314*^9}},ExpressionUUID->"b39071b3-b894-4757-a726-\
+110229436e7f"],
+
+Cell["\<\
+Mo\:017cliwe jest dodanie wielu suwak\[OAcute]w po prostu poprzez dodanie \
+wielu iterator\[OAcute]w wewn\:0105trz polecenia Manipulate, a ponadto dla ka\
+\:017cdego z nich mo\:017cna okre\:015bli\[CAcute] warto\:015b\[CAcute] pocz\
+\:0105tkow\:0105. Do poni\:017cszego polecenia Plot dodano kilka przydatnych \
+opcji:\
+\>", "Text",
+ CellChangeTimes->{{3.388360968520903*^9, 3.388360979447606*^9}, {
+   3.388361064161413*^9, 3.388361088174007*^9}, {3.388361239098934*^9, 
+   3.3883612573532553`*^9}, {3.388361315595765*^9, 3.3883613315000143`*^9}, {
+   3.471790558561339*^9, 3.471790573355627*^9}, 3.7832700567861443`*^9, {
+   3.783270170248014*^9, 3.7832702002738037`*^9}, {3.78327035336385*^9, 
+   3.783270353577537*^9}, 
+   3.9847191310084333`*^9},ExpressionUUID->"af592e2a-c750-4b05-ad8b-\
+9ffedb7fd32f"],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"a", " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"b", " ", "x"}], "]"}]}], "+", "c"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", " ", "0", ",", " ", 
+       RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+     RowBox[{"Ticks", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Range", "[", 
+         RowBox[{"0", ",", " ", 
+          RowBox[{"2", "\[Pi]"}], ",", 
+          RowBox[{"\[Pi]", "/", "3"}]}], "]"}], ",", " ", "Automatic"}], 
+       "}"}]}], ",", " ", 
+     RowBox[{"PlotStyle", "\[Rule]", " ", "Thick"}], ",", " ", 
+     RowBox[{"PlotRange", "\[Rule]", "5"}]}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", " ", "1"}], "}"}], ",", " ", 
+     RowBox[{"-", "3"}], ",", " ", "3"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"b", ",", " ", "1"}], "}"}], ",", " ", 
+     RowBox[{"-", "3"}], ",", " ", "3"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c", ",", " ", "0"}], "}"}], ",", " ", 
+     RowBox[{"-", "3"}], ",", " ", "3"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.3883609847017717`*^9, 3.388360993298255*^9}, {
+  3.388361028556273*^9, 3.3883610614280157`*^9}, {3.388361095258305*^9, 
+  3.3883611926771812`*^9}, {3.388361336577374*^9, 
+  3.388361409317938*^9}},ExpressionUUID->"3321b200-e1f2-4613-99eb-\
+0bd9e278b3cb"],
+
+Cell["Mo\:017cemy r\[OAcute]wnie\:017c nada\[CAcute] nazwy naszym suwakom:", \
+"Text",
+ CellChangeTimes->{{3.388361438360613*^9, 3.388361449792851*^9}, {
+   3.7832695932813063`*^9, 3.783269617840397*^9}, {3.783269655377184*^9, 
+   3.783269656728859*^9}, 3.783269694872703*^9, {3.7832698934687643`*^9, 
+   3.783269916148271*^9}, {3.7832702040961237`*^9, 3.783270204784298*^9}, 
+   3.984719139336217*^9},ExpressionUUID->"4b32e7e4-fadf-4574-9b31-\
+7498556744bf"],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"a", " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"b", " ", "x"}], "]"}]}], "+", "c"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", " ", "0", ",", " ", 
+       RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+     RowBox[{"Ticks", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Range", "[", 
+         RowBox[{"0", ",", " ", 
+          RowBox[{"2", "\[Pi]"}], ",", 
+          RowBox[{"\[Pi]", "/", "3"}]}], "]"}], ",", " ", "Automatic"}], 
+       "}"}]}], ",", " ", 
+     RowBox[{"PlotStyle", "\[Rule]", " ", "Thick"}], ",", " ", 
+     RowBox[{"PlotRange", "\[Rule]", "5"}]}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", " ", "1", ",", " ", "\"\<amplitude\>\""}], "}"}], ",",
+      " ", 
+     RowBox[{"-", "3"}], ",", " ", "3"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"b", ",", " ", "1", ",", " ", "\"\<for period\>\""}], "}"}], ",",
+      " ", 
+     RowBox[{"-", "3"}], ",", " ", "3"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c", ",", " ", "0", ",", " ", "\"\<vert shift\>\""}], "}"}], ",",
+      " ", 
+     RowBox[{"-", "3"}], ",", " ", "3"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.3883609847017717`*^9, 3.388360993298255*^9}, {
+  3.388361028556273*^9, 3.3883610614280157`*^9}, {3.388361095258305*^9, 
+  3.3883611926771812`*^9}, {3.388361336577374*^9, 3.388361409317938*^9}, {
+  3.3883614572998333`*^9, 3.3883614785871964`*^9}, {3.388361513496928*^9, 
+  3.388361541908845*^9}},ExpressionUUID->"a2ffe96c-7d1f-477d-9c90-\
+e88842ef9f87"],
+
+Cell[CellGroupData[{
+
+Cell["Twoja kolej!", "Section",
+ CellChangeTimes->{{3.40780308535048*^9, 3.4078030883673973`*^9}, {
+  3.783270208120102*^9, 3.783270212062471*^9}, {3.984719150355699*^9, 
+  3.984719158667746*^9}},ExpressionUUID->"0d7a55b6-8524-45d0-bb65-\
+789ee07e7bd3"],
+
+Cell["\<\
+Zdefiniuj funkcj\:0119 f. Utw\[OAcute]rz animacj\:0119 dla funkcji y = f(x) + \
+c, gdzie c jest sta\[LSlash]\:0105. Pami\:0119taj, aby kontrolowa\[CAcute] \
+zakres wykresu (za pomoc\:0105 opcji PlotRange).\
+\>", "Text",
+ CellChangeTimes->{{3.407803091941266*^9, 3.407803180608972*^9}, 
+   3.783270057592968*^9, {3.783270228540845*^9, 3.783270290625458*^9}, {
+   3.7837019479188833`*^9, 3.783701950927163*^9}, 
+   3.9847191481723824`*^9},ExpressionUUID->"a8c647b9-957a-4bea-be76-\
+3c6a4b4d925a"],
+
+Cell["\<\
+Spr\[OAcute]buj kilku innych rzeczy. Je\:015bli szukasz czego\:015b nowego, \
+spr\[OAcute]buj zanimowa\[CAcute] kolor wykresu. (Baw si\:0119 dobrze!)\
+\>", "Text",
+ CellChangeTimes->{{3.407803190691739*^9, 3.407803257736364*^9}, {
+   3.7832700585904913`*^9, 3.783270059490078*^9}, {3.78327029696242*^9, 
+   3.783270301593807*^9}, 
+   3.98471916518399*^9},ExpressionUUID->"cac08b4f-f0ea-4b25-9784-\
+edaaf37863cf"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Rozdzia\[LSlash]",
+ StyleBox[" 7",
+  FontSlant->"Italic"],
+ ": \[OpenCurlyDoubleQuote]Help me\[CloseCurlyDoubleQuote]"
+}], "Title",
+ CellChangeTimes->{{3.7794703290731916`*^9, 3.7794703372362432`*^9}, {
+  3.9845492611667013`*^9, 3.9845492716143017`*^9}, {3.9847173573044367`*^9, 
+  3.98471735829566*^9}, {3.9847174449747667`*^9, 3.9847174457437887`*^9}, {
+  3.984719201952518*^9, 
+  3.984719213392151*^9}},ExpressionUUID->"f4678af9-63f4-4f38-afc3-\
+c7a29c3ce22b"],
+
+Cell["\<\
+Na szcz\:0119\:015bcie w programie Mathematica\[RegisteredTrademark] dost\
+\:0119pnych jest mn\[OAcute]stwo materia\[LSlash]\[OAcute]w pomocy. Cz\:0119\
+\:015b\[CAcute] z nich widzieli\:015bmy ju\:017c wcze\:015bniej, zaczynaj\
+\:0105c wpisywa\[CAcute] tekst i wybieraj\:0105c polecenie lub \
+wywo\[LSlash]uj\:0105c list\:0119 opcji. W tym notatniku poka\:017cemy Ci wi\
+\:0119cej, aby\:015b zacz\:0105\[LSlash] korzysta\[CAcute] z systemu pomocy \
+zawsze, gdy b\:0119dzie to konieczne.\
+\>", "Text",
+ CellChangeTimes->{{3.408492756388836*^9, 3.40849280387142*^9}, {
+   3.408492949066353*^9, 3.4084930280117807`*^9}, {3.62863866612703*^9, 
+   3.628638691300116*^9}, {3.783270650651143*^9, 3.78327065123781*^9}, {
+   3.783270691581029*^9, 3.783270708223175*^9}, 
+   3.984719275744979*^9},ExpressionUUID->"e53558c4-cc82-4204-a2dd-\
+f3fcf5addbae"],
+
+Cell["\<\
+Najpierw sp\[OAcute]jrz na pozycje w menu Help (Pomoc). Kilka opcji odsy\
+\[LSlash]a do stron internetowych, a na samym dole znajduje si\:0119 \
+par\:0119 interesuj\:0105cych pyta\:0144: Why the Beep? (Sk\:0105d ten sygna\
+\[LSlash] d\:017awi\:0119kowy?) i Why the Coloring? (Sk\:0105d te kolory?). \
+Miejmy nadziej\:0119, \:017ce wiesz (lub wkr\[OAcute]tce si\:0119 dowiesz), \
+kiedy u\:017cy\[CAcute] ka\:017cdej z nich.\
+\>", "Text",
+ CellChangeTimes->{{3.408492858384821*^9, 3.408492859733549*^9}, {
+   3.408493031660441*^9, 3.408493149055294*^9}, {3.4084933019437838`*^9, 
+   3.408493332767074*^9}, {3.408493638875279*^9, 3.4084936418917103`*^9}, {
+   3.783270651790539*^9, 3.783270664542095*^9}, {3.783270728700625*^9, 
+   3.7832707309485493`*^9}, 3.7832708976076527`*^9, 
+   3.984719281942295*^9},ExpressionUUID->"adc11a4c-5f0d-4db0-8329-\
+ce26cc0a4cc2"],
+
+Cell["\<\
+A teraz najwa\:017cniejsza cz\:0119\:015b\[CAcute] pomocy: W menu Help \
+wybierz Wolfram Documentation (Dokumentacja Wolfram). (Przesu\:0144 to okno \
+na bok, aby\:015b m\[OAcute]g\[LSlash] widzie\[CAcute] oba notebooki jednocze\
+\:015bnie). Mo\:017cesz klika\[CAcute] poszczeg\[OAcute]lne tematy, aby \
+zobaczy\[CAcute] ich podtematy. Rozejrzyj si\:0119 troch\:0119.\
+\>", "Text",
+ CellChangeTimes->{{3.408493710375349*^9, 3.4084938446606073`*^9}, {
+   3.565824048465157*^9, 3.565824064572342*^9}, {3.565824109950672*^9, 
+   3.565824126900313*^9}, {3.659912014494491*^9, 3.659912024722371*^9}, {
+   3.773781090593527*^9, 3.7737811065123243`*^9}, 3.78327065233389*^9, {
+   3.783270737906416*^9, 3.783270756421649*^9}, {3.783270915975087*^9, 
+   3.783270916119277*^9}, 
+   3.984719288894001*^9},ExpressionUUID->"fd0d8968-daf2-420c-809d-\
+7d5f98047f37"],
+
+Cell["\<\
+Teraz znajd\:017a i kliknij Visualization and Graphics (Wizualizacja i \
+Grafika), a nast\:0119pnie wybierz Function Visualization (Wizualizacja \
+Funkcji). Zobaczysz wiele polece\:0144. Do kilku z nich jeszcze \
+wr\[OAcute]cimy, ale na razie wybierz Plot.\
+\>", "Text",
+ CellChangeTimes->{{3.408493856619014*^9, 3.408493928952611*^9}, {
+   3.408493977637432*^9, 3.408494016615871*^9}, {3.471790875849393*^9, 
+   3.471790876523872*^9}, {3.565824152673012*^9, 3.565824154848752*^9}, {
+   3.6286388762180147`*^9, 3.628638881815811*^9}, {3.628638934344817*^9, 
+   3.6286389677536488`*^9}, {3.659912083518589*^9, 3.659912123205061*^9}, 
+   3.783270653207368*^9, {3.783270761053905*^9, 3.783270780517068*^9}, {
+   3.783270913454934*^9, 3.783270925039385*^9}, 3.984719295293563*^9, 
+   3.984722560402102*^9},ExpressionUUID->"b6f6d57f-6cee-46fb-a27a-\
+e51d798886d0"],
+
+Cell["\<\
+Format opisu jest tutaj standardowy:
+
+    Basic command statements (Podstawowe sk\[LSlash]adnie polece\:0144)
+    Details and Options (Szczeg\[OAcute]\[LSlash]y i opcje) \[LongDash] \
+zawiera list\:0119 opcji i wi\:0119cej informacji technicznych
+    Examples (Przyk\[LSlash]ady)
+    Wiele wi\:0119cej kategorii z r\[OAcute]\:017cnymi zagadnieniami i \
+opcjami
+    Other related commands (Inne powi\:0105zane polecenia)
+    Tutorials (Samouczki)
+    Related Guides (Powi\:0105zane przewodniki)
+    Related Links (Powi\:0105zane linki)
+    Version information (Informacje o wersji)\
+\>", "Text",
+ CellChangeTimes->{{3.408494031347797*^9, 3.4084940921124783`*^9}, {
+  3.408494140354648*^9, 3.408494198429263*^9}, {3.4084942718432913`*^9, 
+  3.408494276135247*^9}, {3.408494347633759*^9, 3.4084944147026033`*^9}, {
+  3.408494467955599*^9, 3.408494493177433*^9}, {3.4084948037667427`*^9, 
+  3.408494805031955*^9}, {3.5658242175784807`*^9, 3.565824238951929*^9}, {
+  3.723931837089492*^9, 3.723931861844862*^9}, {3.723931901850127*^9, 
+  3.72393196171452*^9}, {3.773781219309148*^9, 3.773781220861528*^9}, {
+  3.7832707855410757`*^9, 3.783270788040175*^9}, {3.984719304286031*^9, 
+  3.9847193206573277`*^9}},ExpressionUUID->"e15db0b7-8d62-452e-84f1-\
+0fee47d8a540"],
+
+Cell["\<\
+To jasne, \:017ce przy takiej liczbie przyk\[LSlash]ad\[OAcute]w i link\
+\[OAcute]w mo\:017cna by tu sp\:0119dzi\[CAcute] mn\[OAcute]stwo czasu. Na \
+razie rozejrzyj si\:0119 tylko troch\:0119.\
+\>", "Text",
+ CellChangeTimes->{{3.408494526688388*^9, 3.40849453210668*^9}, {
+   3.408494588528915*^9, 3.4084946118716717`*^9}, {3.72393197342531*^9, 
+   3.7239319741761503`*^9}, 3.783270654079183*^9, 
+   3.984719328521977*^9},ExpressionUUID->"2c102143-e7ca-4ccc-a949-\
+6c16e47e2b4d"],
+
+Cell["\<\
+Zwr\[OAcute]\[CAcute] uwag\:0119, \:017ce na g\[OAcute]rze okna Documentation \
+Center (Centrum Dokumentacji) znajduje si\:0119 przycisk Home (Strona g\
+\[LSlash]\[OAcute]wna), a tak\:017ce przyciski Forward/Back (Dalej/Wstecz). \
+Ponadto w pasku na samej g\[OAcute]rze mo\:017cesz wpisa\[CAcute] dowolne \
+polecenie lub termin, aby go wyszuka\[CAcute].\
+\>", "Text",
+ CellChangeTimes->{{3.408494620886587*^9, 3.4084947691731586`*^9}, 
+   3.783270654870772*^9, 3.783270957463969*^9, 
+   3.984719333893607*^9},ExpressionUUID->"eab6b9d2-4c56-43aa-bb48-\
+3f36cb30a5ae"],
+
+Cell["\<\
+Wszystkie podane przyk\[LSlash]ady s\:0105 dzia\[LSlash]aj\:0105cymi kodami (\
+\[OpenCurlyDoubleQuote]na \:017cywo\[CloseCurlyDoubleQuote]). Oznacza to, \
+\:017ce mo\:017cesz je modyfikowa\[CAcute], aby zobaczy\[CAcute], co si\:0119 \
+stanie lub sprawdzi\[CAcute], jak co\:015b dzia\[LSlash]a. I na szcz\:0119\
+\:015bcie nie da si\:0119 w ten spos\[OAcute]b zepsu\[CAcute] niczego w samym \
+Centrum Dokumentacji.\
+\>", "Text",
+ CellChangeTimes->{{3.408494850594727*^9, 3.408494928476308*^9}, 
+   3.783270655949888*^9, {3.783270825734498*^9, 3.783270826438075*^9}, 
+   3.783270952263834*^9, 
+   3.9847193409573183`*^9},ExpressionUUID->"0cfb6f2f-74d6-4469-b77f-\
+e961442c0f12"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Rozdzia\[LSlash] 8: \[OpenCurlyQuote]2D Graphing\[CloseCurlyQuote]", \
+"Title",
+ CellChangeTimes->{{3.3882697155752163`*^9, 3.388269730242085*^9}, 
+   3.3883545574085293`*^9, {3.388354588529594*^9, 3.388354593458974*^9}, {
+   3.388356606185494*^9, 3.3883566239221897`*^9}, {3.388359141904778*^9, 
+   3.38835914977243*^9}, 3.388359210843234*^9, {3.984554811672666*^9, 
+   3.9845548205447693`*^9}, {3.98471736527207*^9, 3.9847173878716087`*^9}, {
+   3.984719345648492*^9, 
+   3.984719346119709*^9}},ExpressionUUID->"62745951-2569-4026-9112-\
+5deb192d9c6e"],
+
+Cell[CellGroupData[{
+
+Cell["Wykresy parametryczne", "Section",
+ CellChangeTimes->{{3.407803643657864*^9, 3.407803646076743*^9}, {
+  3.984719443623357*^9, 
+  3.984719447785372*^9}},ExpressionUUID->"38413b12-e694-4222-9c58-\
+868a6bc14026"],
+
+Cell["\<\
+Dla polecenia ParametricPlot musisz wprowadzi\[CAcute] funkcje x = f(t), y = \
+g(t) w postaci listy funkcji. Poza tym kodowanie i opcje \
+dzia\[LSlash]aj\:0105 w spos\[OAcute]b podobny do tych dla polecenia Plot: \
+\>", "Text",
+ CellChangeTimes->{{3.407803666279724*^9, 3.407803751513419*^9}, {
+   3.407803829449831*^9, 3.4078038330381527`*^9}, 3.783271275396262*^9, {
+   3.7832713260455847`*^9, 3.7832713939744387`*^9}, {3.783702090186983*^9, 
+   3.7837020962262383`*^9}, 
+   3.984719484852326*^9},ExpressionUUID->"93fedf5f-9860-4f6a-97a7-\
+e20a861ed9a7"],
+
+Cell[BoxData[
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Cos", "[", "t", "]"}], ",", " ", 
+     RowBox[{"Sin", "[", "t", "]"}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", "0", ",", " ", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.407803853880265*^9, 
+  3.407803885202303*^9}},ExpressionUUID->"871f1d8e-4de6-41ca-b6d3-\
+915c5dba41e4"],
+
+Cell["\<\
+Sprawd\:017a, jakie opcje s\:0105 dost\:0119pne dla polecenia ParametricPlot:\
+\
+\>", "Text",
+ CellChangeTimes->{{3.407803972155733*^9, 3.407804011134474*^9}, {
+  3.783271398941574*^9, 3.783271403006467*^9}, {3.9847194930944147`*^9, 
+  3.984719493594026*^9}},ExpressionUUID->"71a6a503-6665-4b23-8e56-\
+c885fd9fb181"],
+
+Cell[BoxData[
+ RowBox[{"Options", "[", "ParametricPlot", "]"}]], "Input",
+ CellChangeTimes->{{3.4078038969000263`*^9, 
+  3.407803905499453*^9}},ExpressionUUID->"59fb63a2-cc00-4a23-ac11-\
+b9e6b435ddd2"],
+
+Cell["Nast\:0119pnie utw\[OAcute]rz kilka w\[LSlash]asnych \
+wykres\[OAcute]w.", "Text",
+ CellChangeTimes->{{3.407804014553149*^9, 3.4078040257790813`*^9}, {
+  3.783271407869751*^9, 3.783271408045847*^9}, {3.984719501994431*^9, 
+  3.9847195039101753`*^9}},ExpressionUUID->"99148f25-61eb-4716-b3df-\
+07c6fd84fa92"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Wykresy biegunowe", "Section",
+ CellChangeTimes->{{3.407804286576982*^9, 3.40780429156733*^9}, {
+  3.783271101449286*^9, 3.78327110190548*^9}, {3.98471945121523*^9, 
+  3.98471945523927*^9}},ExpressionUUID->"fe4bed49-79e1-4869-94f6-\
+ef8a044f0690"],
+
+Cell["Te przyk\[LSlash]ady powinny by\[CAcute] jasne:", "Text",
+ CellChangeTimes->{{3.407886302505411*^9, 3.407886308551745*^9}, {
+   3.40788636445439*^9, 3.407886378670266*^9}, {3.40788651125489*^9, 
+   3.407886513147509*^9}, {3.660437136311339*^9, 3.660437137084079*^9}, {
+   3.783271423294795*^9, 3.7832714272369623`*^9}, 
+   3.984719512706121*^9},ExpressionUUID->"fc9766c5-f213-4011-a6b5-\
+4e9b8c51945b"],
+
+Cell[BoxData[
+ RowBox[{"PolarPlot", "[", 
+  RowBox[{
+   RowBox[{"3", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"6", "\[Theta]"}], "]"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", ",", " ", "0", ",", " ", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.407886296282805*^9, 
+  3.40788635723149*^9}},ExpressionUUID->"49a9d477-d371-46a2-9661-\
+35cdbe9ebc7e"],
+
+Cell[BoxData[
+ RowBox[{"PolarPlot", "[", 
+  RowBox[{
+   RowBox[{"3", 
+    RowBox[{"Sin", "[", 
+     FractionBox[
+      RowBox[{"7", "\[Theta]"}], "2"], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", ",", " ", "0", ",", " ", 
+     RowBox[{"4", "\[Pi]"}]}], "}"}], ",", " ", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Green", ",", " ", "Thick"}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.407886389243808*^9, 
+  3.4078864563522577`*^9}},ExpressionUUID->"99ae57ef-ce54-4664-98ee-\
+5bd9280d11fe"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Wykresy funkcji uwik\[LSlash]anych", "Section",
+ CellChangeTimes->{{3.4078865200494413`*^9, 3.407886523894264*^9}, {
+  3.7832711038171377`*^9, 3.783271104337483*^9}, {3.984719463943099*^9, 
+  3.9847194708628607`*^9}},ExpressionUUID->"97bc47eb-348d-4821-b0ca-\
+59f81720fdf5"],
+
+Cell["\<\
+Do tego celu u\:017cywamy polecenia ContourPlot, kt\[OAcute]re jest \
+powi\:0105zane z wykresami 3D. Konieczne jest podanie warto\:015bci domeny \
+zar\[OAcute]wno dla osi x, jak i y. (Na razie pozostaniemy przy \
+podej\:015bciu 2D) . Dla tych wykres\[OAcute]w przydatne b\:0119dzie \
+cz\:0119sto u\:017cycie opcji AspectRatio (Proporcje obrazu), a tak\:017ce w\
+\[LSlash]\:0105czenie wy\:015bwietlania osi:\
+\>", "Text",
+ CellChangeTimes->{{3.4078866195510607`*^9, 3.407886657963374*^9}, {
+   3.4078867909898367`*^9, 3.407886805777467*^9}, {3.407886855657531*^9, 
+   3.407886892939638*^9}, {3.407886928685718*^9, 3.407886933168271*^9}, {
+   3.597584928659317*^9, 3.597584942372715*^9}, {3.783271276183641*^9, 
+   3.783271276903399*^9}, {3.7832714313826733`*^9, 3.78327147196589*^9}, 
+   3.984719527307747*^9},ExpressionUUID->"ea789faa-c0e3-4809-9665-\
+adb92b1af46e"],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      SuperscriptBox["x", "2"], "9"], "+", 
+     FractionBox[
+      SuperscriptBox["y", "2"], "4"]}], "\[Equal]", "1"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "4"}], ",", " ", "4"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "3"}], ",", " ", "3"}], "}"}], ",", " ", 
+   RowBox[{"AspectRatio", "\[Rule]", "Automatic"}], ",", " ", 
+   RowBox[{"Axes", "\[Rule]", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.407886676876895*^9, 3.407886772394177*^9}, {
+  3.407886821201788*^9, 3.4078868499277277`*^9}, {3.407886905466112*^9, 
+  3.407886909462619*^9}},ExpressionUUID->"6f6346b1-eb3d-4ec4-a365-\
+9c0deb1061b7"],
+
+Cell["\<\
+Istnieje wiele bardzo interesuj\:0105cych wykres\[OAcute]w funkcji \
+zdefiniowanych w spos\[OAcute]b uwik\[LSlash]any:\
+\>", "Text",
+ CellChangeTimes->{{3.407886943424141*^9, 3.407886965547008*^9}, {
+   3.783271476154978*^9, 3.783271489933302*^9}, 3.98471953553825*^9, 
+   3.984744428627681*^9},ExpressionUUID->"db65a25a-af22-480a-827f-\
+24646790f68e"],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Sin", "[", 
+      RowBox[{"3", "x"}], "]"}], " ", "+", 
+     RowBox[{"Cos", "[", " ", 
+      RowBox[{"2", " ", "y"}], "]"}], "+", "x", " ", "+", " ", "y"}], "\[Equal]", 
+    RowBox[{"1", "/", "2"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "4"}], ",", " ", "4"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "4"}], ",", " ", "4"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.407887018585226*^9, 3.407887021747448*^9}, {
+  3.407887056366824*^9, 
+  3.407887201262087*^9}},ExpressionUUID->"bc13ac93-9381-4a13-b2c5-\
+0ff134d78ae9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "A co z ",
+ Cell[BoxData[
+  FormBox[
+   RadicalBox["x", "3"], TraditionalForm]],ExpressionUUID->
+  "f48572fe-39ad-43e6-bc84-a9966085397e"],
+ "?"
+}], "Section",
+ CellChangeTimes->{{3.40788945430732*^9, 3.407889471895564*^9}, {
+  3.7832711135294113`*^9, 3.783271113969638*^9}, {3.984719540550119*^9, 
+  3.9847195413337727`*^9}},ExpressionUUID->"3f50844f-dbaa-4dff-a206-\
+d17c56aebc13"],
+
+Cell["Sprawd\:017a poni\:017cszy przyk\[LSlash]ad:", "Text",
+ CellChangeTimes->{{3.407889479554802*^9, 3.407889483679523*^9}, {
+   3.783271503981217*^9, 3.783271504780662*^9}, 
+   3.984719550177821*^9},ExpressionUUID->"c27f8645-ee30-48d1-85f8-\
+118c712de246"],
+
+Cell[BoxData[
+ RadicalBox[
+  RowBox[{"-", "8"}], "3"]], "Input",
+ CellChangeTimes->{{3.407889489287732*^9, 
+  3.40788949174047*^9}},ExpressionUUID->"15c26984-121b-46e1-9674-\
+59e7e0ae26b3"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   SuperscriptBox["x", 
+    RowBox[{"1", "/", "3"}]], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "8"}], ",", " ", "8"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.4078872199166317`*^9, 3.407887233502899*^9}, {
+   3.407887718437497*^9, 3.4078877249177856`*^9}, {3.407888743891102*^9, 
+   3.407888766266636*^9}, 
+   3.407889499103054*^9},ExpressionUUID->"e34f9943-361d-42d6-82f3-\
+a543592ebdf4"],
+
+Cell["\<\
+Prawdopodobnie nie tego oczekiwa\[LSlash]e\:015b. J\:0119zyk Wolfram Language\
+\[Trademark] dzia\[LSlash]a w trybie liczb zespolonych, wi\:0119c pierwiastek \
+sze\:015bcienny z liczby ujemnej daje wiele rozwi\:0105za\:0144 zespolonych \
+\[Dash] kt\[OAcute]re nie s\:0105 rysowane na wykresie. Oto dwie opcje, jedna \
+specyficzna dla pierwiastka sze\:015bciennego, a druga, kt\[OAcute]r\:0105 mo\
+\:017cna uog\[OAcute]lni\[CAcute] na inne pierwiastki:\
+\>", "Text",
+ CellChangeTimes->{{3.407889503078784*^9, 3.4078896136296062`*^9}, {
+   3.407889713746501*^9, 3.407889718257763*^9}, {3.407889826923684*^9, 
+   3.4078898594838533`*^9}, {3.597584991392528*^9, 3.597585000200989*^9}, {
+   3.628639256266281*^9, 3.6286392849443493`*^9}, {3.6286393684874277`*^9, 
+   3.628639377823512*^9}, {3.773939528454378*^9, 3.773939533279701*^9}, 
+   3.783271277735009*^9, {3.7832715123250847`*^9, 3.783271525389556*^9}, 
+   3.9847195745998507`*^9},ExpressionUUID->"286439f1-2ecd-4352-9115-\
+0a50571cd9c8"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"CubeRoot", "[", "x", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "8"}], ",", " ", "8"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.407889778583023*^9, 3.407889813462554*^9}, {
+  3.628639388324286*^9, 
+  3.628639450462552*^9}},ExpressionUUID->"9b8002c8-e9f2-4ad3-9030-\
+494d06e2159c"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Surd", "[", 
+    RowBox[{"x", ",", " ", "3"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "8"}], ",", " ", "8"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.407889728957045*^9, 3.40788973778684*^9}, 
+   3.628639409446519*^9, {3.628639481860446*^9, 
+   3.628639494484372*^9}},ExpressionUUID->"53156a34-feb3-4341-b44b-\
+9b5bffaaf009"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Wi\:0119cej opcji pomocy", "Section",
+ CellChangeTimes->{{3.407890214123122*^9, 3.407890223731921*^9}, {
+  3.4717913709884253`*^9, 3.471791375107464*^9}, {3.783271117681498*^9, 
+  3.783271118545659*^9}, {3.984720787124599*^9, 
+  3.984720792084261*^9}},ExpressionUUID->"f227fd03-e6f9-46a9-841a-\
+80b56eecf15a"],
+
+Cell["\<\
+Jak ju\:017c widzieli\:015bmy, w j\:0119zyku Wolfram Language dost\:0119pnych \
+jest mn\[OAcute]stwo opcji pomocy. W\[LSlash]a\:015bciwie, dop\[OAcute]ki nie \
+zdob\:0119dziesz pewnych podstaw w obs\[LSlash]udze oprogramowania, mo\:017ce \
+to by\[CAcute] nieco przyt\[LSlash]aczaj\:0105ce. Ze zrozumieniem \
+podstawowych struktur programu korzystanie z Documentation Center (Centrum \
+Dokumentacji) staje si\:0119 znacznie \[LSlash]atwiejsze. Jeszcze raz, z menu \
+Help wybierz Wolfram Documentation. Ponownie znajd\:017a Visualization and \
+Graphics, a nast\:0119pnie wybierz Function Visualization. Sprawd\:017a wi\
+\:0119cej mo\:017cliwo\:015bci dla polece\:0144 ParametricPlot, ContourPlot \
+lub PolarPlot. (Do temat\[OAcute]w 3D przejdziemy ju\:017c wkr\[OAcute]tce).\
+\>", "Text",
+ CellChangeTimes->{{3.407890313285344*^9, 3.407890380832912*^9}, {
+   3.407890417152163*^9, 3.407890463447586*^9}, {3.4717915323857813`*^9, 
+   3.471791632738926*^9}, {3.471791772089671*^9, 3.471791776617753*^9}, {
+   3.660437274471718*^9, 3.66043727998143*^9}, {3.77394214805564*^9, 
+   3.773942152656084*^9}, {3.783271278439776*^9, 3.783271298677573*^9}, {
+   3.783271528541459*^9, 3.783271572215464*^9}, 3.7832727189440727`*^9, {
+   3.984719583074915*^9, 
+   3.984719583866313*^9}},ExpressionUUID->"6713821e-86fb-4c97-a75d-\
+8e2641f07206"],
+
+Cell["Kolejn\:0105 szybk\:0105 opcj\:0105 jest wypisanie \
+\[OpenCurlyDoubleQuote]?\[CloseCurlyDoubleQuote] oraz komendy:", "Text",
+ CellChangeTimes->{{3.723932209837863*^9, 3.723932239644373*^9}, {
+   3.783271580245715*^9, 3.783271580574028*^9}, 3.984719592673373*^9, {
+   3.984744435266831*^9, 
+   3.984744454710597*^9}},ExpressionUUID->"eabd8806-6050-4859-8df9-\
+7a49524268b7"],
+
+Cell[BoxData[
+ RowBox[{"?", "Plot"}]], "Input",
+ CellChangeTimes->{{3.7239321939907703`*^9, 
+  3.723932195375062*^9}},ExpressionUUID->"f2c9e2be-fb16-48ae-ad9a-\
+6f8d84a04571"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\[CapitalCAcute]wiczenia", "Section",
+ CellChangeTimes->{{3.7739395624764*^9, 3.7739395642072687`*^9}, {
+  3.984719610596774*^9, 
+  3.984719612644356*^9}},ExpressionUUID->"4e0b1829-347d-4740-b71d-\
+f0cb3d91c7e1"],
+
+Cell["\<\
+(1) Zdefiniuj zar\[OAcute]wno x(t) = cos(3t), jak i y(t) = 2sin(5t) i narysuj \
+krzyw\:0105 parametryczn\:0105 (x(t), y(t)) dla 0 <= t <= 2Pi. Zr\[OAcute]b \
+wykres pogrubiony i zielony. (To jest krzywa Lissajous).\
+\>", "Text",
+ CellChangeTimes->{{3.7739395763804092`*^9, 3.773939594696314*^9}, 
+   3.773939644255268*^9, {3.7739398131487703`*^9, 3.773939965186863*^9}, {
+   3.7739404813944693`*^9, 3.773940522019582*^9}, {3.7832715962391357`*^9, 
+   3.783271672344902*^9}, 
+   3.9847196059612017`*^9},ExpressionUUID->"78399338-8d57-424c-8a83-\
+1e140afce13a"],
+
+Cell["\<\
+(2) Narysuj krzyw\:0105 biegunow\:0105 r(theta) = theta sin(3 theta) w \
+przedziale 0 \[LessEqual] theta \[LessEqual] 2\[Pi].\
+\>", "Text",
+ CellChangeTimes->{{3.7739399756498413`*^9, 3.773939989105146*^9}, {
+  3.773940207511231*^9, 3.7739402183568068`*^9}, {3.7739403482556868`*^9, 
+  3.773940385741865*^9}, {3.7832716891116123`*^9, 3.783271709791534*^9}, {
+  3.9847196330652037`*^9, 
+  3.9847196723391953`*^9}},ExpressionUUID->"82b6a072-8cf3-4149-9688-\
+279b38406277"],
+
+Cell["\<\
+((3) Narysuj wykres krzywej uwik\[LSlash]anej x^3 - 3x^2 y^3 + 4y = 0. Jako \
+dodatek (bonus), zast\:0105p 0 po prawej stronie liter\:0105 k i zanimuj \
+wykres dla -6 <= k <= 6. Zwr\[OAcute]\[CAcute] uwag\:0119, \:017ce podczas \
+przesuwania suwaka, program Mathematica\[RegisteredTrademark] rysuje bardzo \
+uproszczone/szkicowe wykresy, aby nad\:0105\:017cy\[CAcute] za suwakiem. \
+Niekt\[OAcute]re z nich naprawd\:0119 nie wygl\:0105daj\:0105 zbyt dobrze, \
+maj\:0105c wiele prostych segment\[OAcute]w, ale gdy tylko pu\:015bcisz suwak \
+na konkretnej warto\:015bci k, Mathematica wygeneruje dla ciebie \
+\[LSlash]adny i dok\[LSlash]adny wykres.\
+\>", "Text",
+ CellChangeTimes->{{3.7739403896912746`*^9, 3.773940401964879*^9}, {
+   3.773940909812909*^9, 3.773941188285379*^9}, {3.78327171898529*^9, 
+   3.78327178589704*^9}, 3.783272677224766*^9, 
+   3.984719679961547*^9},ExpressionUUID->"f98b1dcc-e400-4b99-a09d-\
+61f936c07db5"],
+
+Cell["\<\
+(4) Jak my\:015blisz, co zrobi j\:0119zyk Wolfram Language, gdy \
+spr\[OAcute]bujesz narysowa\[CAcute] wykres y = x^(2/3)? Napraw to, aby \
+uzyska\[CAcute] kompletny wykres.\
+\>", "Text",
+ CellChangeTimes->{{3.773941258117319*^9, 3.7739413178347063`*^9}, {
+   3.783271801657539*^9, 3.783271815961605*^9}, 3.783272708751133*^9, {
+   3.984719687720107*^9, 
+   3.984719690131514*^9}},ExpressionUUID->"fb06027e-4ee4-4ad2-bd35-\
+4072969ef071"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Rozdzia\[LSlash] 9: \[OpenCurlyDoubleQuote]Solving equations\
+\[CloseCurlyDoubleQuote]", "Title",
+ CellChangeTimes->{{3.984717405886656*^9, 3.984717420008985*^9}, {
+  3.984719696339645*^9, 3.984719705339402*^9}, {3.984722742797572*^9, 
+  3.9847227471114798`*^9}},ExpressionUUID->"6c399e13-4dc1-4ab8-a750-\
+15c892a817ce"],
+
+Cell[CellGroupData[{
+
+Cell["Podstawy", "Section",
+ CellChangeTimes->{{3.407968626638453*^9, 3.407968627452035*^9}, {
+  3.984719969511467*^9, 
+  3.9847199742473383`*^9}},ExpressionUUID->"21a9b20b-05f4-46de-8f90-\
+80cef430bb49"],
+
+Cell[TextData[{
+ "Polecenie ",
+ StyleBox[ButtonBox["Solve",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Solve"],
+  FontWeight->"Bold"],
+ " to dobre miejsce, aby zacz\:0105\[CAcute]. Sprawd\:017a poni\:017csze \
+przyk\[LSlash]ady. Zwr\[OAcute]\[CAcute] uwag\:0119 na podw\[OAcute]jny znak \
+r\[OAcute]wno\:015bci"
+}], "Text",
+ CellChangeTimes->{{3.407968640876813*^9, 3.407968676646401*^9}, {
+  3.783273744277341*^9, 3.7832737450012493`*^9}, {3.783273813974224*^9, 
+  3.7832738273185987`*^9}, {3.783274946895418*^9, 3.783274953830068*^9}, {
+  3.9847199896363773`*^9, 
+  3.984719996951312*^9}},ExpressionUUID->"2a33bf2e-753e-4121-ab43-\
+57092564ea9f"],
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "2"], "-", "x", "-", "6"}], "\[Equal]", "0"}], ",", 
+   " ", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.407968680633542*^9, 
+  3.407968711261447*^9}},ExpressionUUID->"765f9457-91dc-4451-b38f-\
+3b48090fabc6"],
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "2"], "-", "x", "+", "6"}], "\[Equal]", "0"}], ",", 
+   " ", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.407968680633542*^9, 
+  3.4079687213880873`*^9}},ExpressionUUID->"5efb3ff7-e2ff-4df8-aadf-\
+9d2d4a442597"],
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"2", 
+      SuperscriptBox[
+       RowBox[{"Sin", "[", "x", "]"}], "2"]}], "-", 
+     RowBox[{"Sin", "[", "x", "]"}], "-", "1"}], "\[Equal]", "0"}], ",", " ", 
+   "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.407968734692219*^9, 
+  3.407968778479743*^9}},ExpressionUUID->"b730df56-3f42-41fe-8408-\
+0ae27b75de46"],
+
+Cell["(Robi wra\:017cenie, prawda?):", "Text",
+ CellChangeTimes->{{3.407968999617989*^9, 3.407969110821248*^9}, {
+   3.773949932028019*^9, 3.7739499421420937`*^9}, 3.783273830854372*^9, 
+   3.984720003448325*^9},ExpressionUUID->"eacfe262-45a4-4617-b382-\
+da44ca12b681"],
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "2"], "+", " ", 
+     RowBox[{"x", " ", "y"}], " ", "+", " ", 
+     RowBox[{"3", 
+      SuperscriptBox["y", "2"]}]}], "\[Equal]", "4"}], ",", " ", "x"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.4079691181804743`*^9, 
+  3.407969150433387*^9}},ExpressionUUID->"458b8145-3b54-4c3a-bf21-\
+e45b506778ee"],
+
+Cell[TextData[StyleBox["Edytuj poprzedni\:0105 linijk\:0119, aby \
+rozwi\:0105za\[CAcute] r\[OAcute]wnanie ze wzgl\:0119du na zmienn\:0105 y, a \
+nie x.",
+ FontSlant->"Italic"]], "Text",
+ CellChangeTimes->{{3.4079691666986837`*^9, 3.40796918127916*^9}, {
+   3.7832738345185947`*^9, 3.783273847790732*^9}, {3.783702720471212*^9, 
+   3.783702736919076*^9}, 
+   3.984720012325428*^9},ExpressionUUID->"5d37e072-1684-4548-be63-\
+edc5c68ed400"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Kolejna ciekawostka", "Section",
+ CellChangeTimes->{{3.407969219749941*^9, 3.4079692269144087`*^9}, {
+  3.783273779245419*^9, 3.783273779805459*^9}, {3.984720020452824*^9, 
+  3.984720024142498*^9}},ExpressionUUID->"3db819a9-7e0e-44d9-b43b-\
+4951242ba81a"],
+
+Cell["\<\
+Wypr\[OAcute]buj te r\[OAcute]wnania na symbolach (r\[OAcute]wnania og\
+\[OAcute]lne z parametrami):\
+\>", "Text",
+ CellChangeTimes->{{3.407969232364914*^9, 3.407969237171879*^9}, {
+   3.7832738511198263`*^9, 3.783273851846846*^9}, 
+   3.984720030898425*^9},ExpressionUUID->"c229262c-9890-410b-8c33-\
+93e74c203885"],
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"a", " ", 
+      SuperscriptBox["x", "2"]}], "+", " ", 
+     RowBox[{"b", " ", "x"}], " ", "+", " ", "c"}], " ", "\[Equal]", "0"}], ",",
+    " ", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.4079692415081873`*^9, 
+  3.407969258092018*^9}},ExpressionUUID->"380a377d-c3ba-41bd-98fe-\
+2cc4dcabcfce"],
+
+Cell["\<\
+Tego w\[LSlash]a\:015bnie by\:015bmy si\:0119 mniej wi\:0119cej spodziewali, \
+ale musimy r\[OAcute]wnie\:017c pami\:0119ta\[CAcute] o ograniczeniach. \
+Polecenie Reduce mo\:017ce w tym pom\[OAcute]c, ale samo rozwi\:0105zanie \
+staje si\:0119 przez to bardziej skomplikowane. Znak && oznacza logiczne \
+\[OpenCurlyDoubleQuote]i\[CloseCurlyDoubleQuote] (koniunkcj\:0119), podczas \
+gdy || odnosi si\:0119 do logicznego \[OpenCurlyDoubleQuote]lub\
+\[CloseCurlyDoubleQuote] (alternatywy).\
+\>", "Text",
+ CellChangeTimes->{{3.407969269363105*^9, 3.407969372739149*^9}, 
+   3.7832737460403423`*^9, {3.7832738559589043`*^9, 3.783273860823674*^9}, {
+   3.783273899401018*^9, 3.783273918777647*^9}, 3.783702752584237*^9, 
+   3.984720040643862*^9},ExpressionUUID->"fe5a364d-99e3-46d2-a767-\
+9f90a6f209e3"],
+
+Cell[BoxData[
+ RowBox[{"Reduce", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"a", " ", 
+      SuperscriptBox["x", "2"]}], "+", " ", 
+     RowBox[{"b", " ", "x"}], " ", "+", " ", "c"}], " ", "\[Equal]", "0"}], ",",
+    " ", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.4079692415081873`*^9, 3.407969258092018*^9}, {
+  3.407969377655505*^9, 3.4079693819316463`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"2c678e08-e9cd-4845-bfb5-87d7aa38acbe"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Niekt\[OAcute]re dzia\[LSlash]aj\:0105... a inne nie", "Section",
+ CellChangeTimes->{{3.4079695020496483`*^9, 3.4079695061977654`*^9}, {
+  3.7832737832534513`*^9, 3.783273800998097*^9}, {3.9847200785655518`*^9, 
+  3.984720089037678*^9}},ExpressionUUID->"cdd4553b-97d2-47d1-b495-\
+a1d9f60fe97b"],
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "3"], "-", " ", 
+     RowBox[{"6", "x"}], "+", "2"}], "\[Equal]", "0"}], ",", " ", "x"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.4079695236197777`*^9, 
+  3.407969538981048*^9}},ExpressionUUID->"56a7e3e2-2e6e-4c7f-bc4e-\
+24dc6e391ac4"],
+
+Cell["\<\
+Ciekawe. Chocia\:017c jest to r\[OAcute]wnanie sze\:015bcienne, to nie mia\
+\[LSlash]o \[OpenCurlyDoubleQuote]\[LSlash]adnych\[CloseCurlyDoubleQuote] \
+pierwiastk\[OAcute]w. Zasadniczo j\:0119zyk Wolfram Language\[Trademark] m\
+\[OAcute]wi Ci w ten spos\[OAcute]b, \:017ce tak naprawd\:0119 nie chcesz \
+widzie\[CAcute] jego dok\[LSlash]adnych rozwi\:0105za\:0144. Podaje przybli\
+\:017cenia i notacj\:0119 wskazuj\:0105c\:0105, \:017ce zmieni\[LSlash] pewne \
+rzeczy za kulisami. Najechanie kursorem na wyniki poka\:017ce, \:017ce jest \
+to rozwi\:0105zanie tego r\[OAcute]wnania sze\:015bciennego. \
+C\[OAcute]\:017c...\
+\>", "Text",
+ CellChangeTimes->{{3.407969551156764*^9, 3.40796965684591*^9}, {
+   3.407969697678673*^9, 3.407969742275172*^9}, {3.471791940520083*^9, 
+   3.4717919411303988`*^9}, {3.628639849202169*^9, 3.628639880537731*^9}, {
+   3.773944525915802*^9, 3.773944526365301*^9}, {3.773950211963688*^9, 
+   3.773950322431704*^9}, {3.773950388157599*^9, 3.7739504250587387`*^9}, {
+   3.783273937354374*^9, 3.783273985937654*^9}, 
+   3.9847200992658777`*^9},ExpressionUUID->"983318a4-2f2d-4869-a865-\
+d1cb7afc63e2"],
+
+Cell[TextData[{
+ "Zamiast tego spr\[OAcute]buj u\:017cy\[CAcute] ",
+ StyleBox[ButtonBox["NSolve",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/NSolve"],
+  FontWeight->"Bold"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.773950433620098*^9, 3.773950442564725*^9}, {
+  3.7832739905926113`*^9, 3.783273993442132*^9}, {3.984720110834334*^9, 
+  3.984720113901312*^9}},ExpressionUUID->"14c95709-b894-4223-9c04-\
+1ffc42d74b05"],
+
+Cell[BoxData[
+ RowBox[{"NSolve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "3"], " ", "-", " ", 
+     RowBox[{"6", "x"}], "+", "2"}], "\[Equal]", "0"}], ",", " ", "x"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.4079698108177156`*^9, 3.4079698307457314`*^9}, {
+  3.77395034755661*^9, 3.773950378987829*^9}, {3.773950451824065*^9, 
+  3.773950459946343*^9}},ExpressionUUID->"ef143827-99da-412d-a401-\
+36acd2d3c51c"],
+
+Cell[BoxData[
+ RowBox[{"NSolve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "4"], "-", 
+     SqrtBox[
+      RowBox[{"2", "x"}]], "+", 
+     RowBox[{"3", "x"}]}], "\[Equal]", "6"}], ",", " ", "x"}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.407969841067062*^9, 
+  3.4079698628632307`*^9}},ExpressionUUID->"9eb34d1f-dda2-4780-a9d7-\
+7189ef4eb5b9"],
+
+Cell["Wypr\[OAcute]buj kilka innych.", "Text",
+ CellChangeTimes->{{3.4079698792126007`*^9, 3.4079698822109337`*^9}, 
+   3.984720121273624*^9},ExpressionUUID->"1fcaa4b5-4561-49f3-827a-\
+36ea461fee61"],
+
+Cell["Ale to nie za\[LSlash]atwi ka\:017cdej sytuacji:", "Text",
+ CellChangeTimes->{{3.407969897243785*^9, 3.407969903155273*^9}, {
+  3.783274000201878*^9, 3.783274005049407*^9}, {3.984720127945331*^9, 
+  3.98472012980478*^9}},ExpressionUUID->"3354d9cb-5dc4-4558-ac98-\
+369d0c59ea5a"],
+
+Cell[BoxData[
+ RowBox[{"NSolve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "-", 
+     RowBox[{"Cos", "[", "x", "]"}]}], "\[Equal]", "0"}], ",", " ", "x"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.407969905217782*^9, 
+  3.407969916293947*^9}},ExpressionUUID->"9643365a-f097-4d5d-aacd-\
+319332d0d68b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Inna metoda", "Section",
+ CellChangeTimes->{{3.4079699609305696`*^9, 3.407969963026189*^9}, {
+  3.7832738041337547`*^9, 3.783273804717948*^9}, {3.984720134045167*^9, 
+  3.9847201362608356`*^9}},ExpressionUUID->"9a1b08bb-f5fc-430b-bcf2-\
+7c7a1e1511af"],
+
+Cell["\<\
+Polecenia Solve i NSolve dzia\[LSlash]aj\:0105 na r\[OAcute]wnaniach \
+algebraicznych. Polecenie FindRoot dzia\[LSlash]a na inne przypadki. Jest to \
+wariacja na temat metody Newtona i wymaga podania warto\:015bci \
+pocz\:0105tkowej, kt\[OAcute]ra jest w miar\:0119 bliska szukanego \
+pierwiastka. Rozwa\:017cmy r\[OAcute]wnanie x = cos(x). Narysuj wykresy dw\
+\[OAcute]ch funkcji zdefiniowanych przez obie strony r\[OAcute]wnania, aby \
+zobaczy\[CAcute], co ma sens:\
+\>", "Text",
+ CellChangeTimes->{{3.407970098659637*^9, 3.407970114969536*^9}, {
+  3.4079701590717793`*^9, 3.407970273842289*^9}, {3.4079703506578913`*^9, 
+  3.407970360303749*^9}, {3.473289940208734*^9, 3.47328998105914*^9}, {
+  3.47329003428932*^9, 3.4732900587113113`*^9}, {3.473290089625536*^9, 
+  3.473290104527766*^9}, {3.7739445645620193`*^9, 3.7739445647404823`*^9}, {
+  3.7832737468007936`*^9, 3.783273748248951*^9}, {3.783274013059276*^9, 
+  3.783274085787521*^9}, {3.984720145457836*^9, 
+  3.984720147492586*^9}},ExpressionUUID->"ca257299-0049-4346-a988-\
+32ce21197d00"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"Cos", "[", "x", "]"}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "2"}], ",", " ", "2"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.47328998623943*^9, 
+  3.473290003483143*^9}},ExpressionUUID->"daa260de-122c-4afb-a10e-\
+fc56c03925b4"],
+
+Cell["\<\
+Bior\:0105c pod uwag\:0119 ten wykres, zacznijmy od pocz\:0105tkowego przybli\
+\:017cenia x = 1:\
+\>", "Text",
+ CellChangeTimes->{{3.473289983801758*^9, 3.473290018120092*^9}, {
+   3.473290121151311*^9, 3.473290124238305*^9}, {3.783274090778975*^9, 
+   3.7832741077581787`*^9}, 
+   3.9847201552458572`*^9},ExpressionUUID->"cd4def8c-736a-4cba-a91a-\
+8e93aceebe23"],
+
+Cell[BoxData[
+ RowBox[{"FindRoot", "[", 
+  RowBox[{
+   RowBox[{"x", "==", 
+    RowBox[{"Cos", "[", "x", "]"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.4079703226878366`*^9, 3.4079703438368607`*^9}, {
+  3.691969632160701*^9, 
+  3.6919696359357224`*^9}},ExpressionUUID->"984454b7-0775-4952-ac83-\
+e2e696cd87b9"],
+
+Cell["\<\
+Jako kolejny przyk\[LSlash]ad, rozwa\:017cmy funkcj\:0119 wielomianow\:0105 \
+f(x) = x^3 + 5x^2 - 7 i niech g(x) = x + 2sin(3x - 1). Najpierw zdefiniujemy \
+te funkcje i narysujemy je na wsp\[OAcute]lnym wykresie, aby zorientowa\
+\[CAcute] si\:0119, gdzie si\:0119 przecinaj\:0105:\
+\>", "Text",
+ CellChangeTimes->{{3.407970366136386*^9, 3.407970377748384*^9}, {
+   3.407970457041807*^9, 3.40797045766422*^9}, {3.4079705843456907`*^9, 
+   3.4079706229920397`*^9}, {3.407970657641863*^9, 3.4079706725474*^9}, {
+   3.407970782104569*^9, 3.40797078965139*^9}, {3.471792013916901*^9, 
+   3.471792040748249*^9}, {3.597585638631701*^9, 3.59758563958834*^9}, {
+   3.7832737661142063`*^9, 3.78327376962213*^9}, {3.7832741154279833`*^9, 
+   3.783274171988637*^9}, {3.7832747069257393`*^9, 3.783274768889267*^9}, {
+   3.783274976760173*^9, 3.783274976760285*^9}, {3.783702793520516*^9, 
+   3.783702793520617*^9}, 
+   3.98472016185699*^9},ExpressionUUID->"fbacdb19-6745-4491-be73-\
+c726b704a599"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], ":=", 
+   RowBox[{
+    SuperscriptBox["x", "3"], "+", 
+    RowBox[{"5", 
+     SuperscriptBox["x", "2"]}], "-", "7"}]}], ";", " ", 
+  RowBox[{
+   RowBox[{"g", "[", "x_", "]"}], ":=", 
+   RowBox[{"x", "+", 
+    RowBox[{"2", 
+     RowBox[{"Sin", "[", 
+      RowBox[{
+       RowBox[{"3", "x"}], "-", "1"}], "]"}]}]}]}]}]], "Input",
+ CellChangeTimes->{{3.4079704027472267`*^9, 3.4079704215694942`*^9}, {
+  3.407970694708518*^9, 3.407970721358933*^9}, {3.4079707561676826`*^9, 
+  3.407970756599304*^9}},ExpressionUUID->"1c0120f7-c410-40d6-a685-\
+5bdc4c4b0e5a"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"f", "[", "x", "]"}], ",", " ", 
+     RowBox[{"g", "[", "x", "]"}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "5.4"}], ",", " ", "2"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.407970467833839*^9, 3.407970468318018*^9}, {
+   3.407970726571005*^9, 3.407970778090583*^9}, 
+   3.4079709199148293`*^9},ExpressionUUID->"955903a9-dc38-475d-b95e-\
+d86dec949b41"],
+
+Cell["\<\
+Jeden z punkt\[OAcute]w przeci\:0119cia znajduje si\:0119 blisko x = -5, wi\
+\:0119c najpierw wprowadzimy t\:0119 warto\:015b\[CAcute]:\
+\>", "Text",
+ CellChangeTimes->{{3.407970967137903*^9, 3.40797098801007*^9}, {
+   3.59758570759756*^9, 3.597585708497567*^9}, {3.7832741752924433`*^9, 
+   3.783274197636714*^9}, {3.7832747823617277`*^9, 3.7832748086116056`*^9}, 
+   3.984720169350483*^9, 
+   3.984745509590674*^9},ExpressionUUID->"1568af90-aa1d-4ccd-b2aa-\
+85a04c984330"],
+
+Cell[BoxData[
+ RowBox[{"FindRoot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"f", "[", "x", "]"}], "\[Equal]", 
+    RowBox[{"g", "[", "x", "]"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "5"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.407970812489135*^9, 3.407970831212174*^9}, {
+   3.407970879901802*^9, 3.407970903828985*^9}, 
+   3.40797093851851*^9},ExpressionUUID->"ed7399f3-d905-430a-9bb7-\
+aa0cee07dabd"],
+
+Cell["\<\
+Znajd\:017a dwa pozosta\[LSlash]e rozwi\:0105zania (u\:017cyj z menu g\
+\[OAcute]rnego Insert \[FilledRightTriangle] Input from Above (Wstaw -> Wej\
+\:015bcie powy\:017cej), a nast\:0119pnie edytuj warto\:015b\[CAcute] pocz\
+\:0105tkow\:0105 w wywo\[LSlash]anym polu.\
+\>", "Text",
+ CellChangeTimes->{{3.407970994041761*^9, 3.407971001256*^9}, {
+   3.407971034215665*^9, 3.4079710930076237`*^9}, {3.4717920642567797`*^9, 
+   3.471792064786729*^9}, {3.4732901822403793`*^9, 3.4732901855517197`*^9}, 
+   3.783273749113102*^9, {3.7832742110608873`*^9, 3.783274243477113*^9}, {
+   3.984720175544174*^9, 3.984720177140024*^9}, {3.98474555332495*^9, 
+   3.984745564125351*^9}},ExpressionUUID->"5c29e1ce-25ce-43ae-a671-\
+4453e9ee80ee"],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", 
+  RowBox[{"f", ",", " ", "g"}], "]"}]], "Input",
+ CellChangeTimes->{{3.40797114459489*^9, 
+  3.407971148110023*^9}},ExpressionUUID->"a3f20007-f116-4cc0-8c1e-\
+f290e49e60a8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Sprawdzanie", "Section",
+ CellChangeTimes->{{3.4079712316903753`*^9, 3.407971232909274*^9}, {
+  3.98472020605875*^9, 
+  3.984720231683593*^9}},ExpressionUUID->"0dcfc362-941f-4474-97f3-\
+c79dbcff3c07"],
+
+Cell["Najpierw zdefiniujemy funkcj\:0119 f:", "Text",
+ CellChangeTimes->{{3.407971243954793*^9, 3.407971251588599*^9}, {
+   3.7832742507818747`*^9, 3.78327425752593*^9}, {3.783274819402852*^9, 
+   3.7832748276830606`*^9}, {3.783702813833942*^9, 3.7837028138340197`*^9}, 
+   3.98472024080809*^9},ExpressionUUID->"c2488b8f-2f1b-4c9c-9957-\
+0f2393def7a9"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", "x_", "]"}], ":=", 
+  RowBox[{
+   SuperscriptBox["x", "4"], "+", 
+   RowBox[{"12", 
+    SuperscriptBox["x", "3"]}], "-", 
+   RowBox[{"305", 
+    SuperscriptBox["x", "2"]}], "-", 
+   RowBox[{"1056", "x"}], "+", "3220"}]}]], "Input",
+ CellChangeTimes->{{3.407971255910125*^9, 
+  3.4079712959911613`*^9}},ExpressionUUID->"791d9468-d971-4f69-846f-\
+6fbd1cfa157d"],
+
+Cell["Zbi\[OAcute]r naszych rozwi\:0105za\:0144 nazwiemy solns:", "Text",
+ CellChangeTimes->{{3.40797131813304*^9, 3.4079713271752577`*^9}, {
+   3.783274262301265*^9, 3.783274287326991*^9}, 
+   3.9847202466237907`*^9},ExpressionUUID->"a5a84f17-0f5d-42e1-983f-\
+a2f2f71b7c88"],
+
+Cell[BoxData[
+ RowBox[{"solns", "=", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "[", "x", "]"}], "\[Equal]", "0"}], ",", " ", "x"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.407971329730315*^9, 
+  3.407971379873657*^9}},ExpressionUUID->"375622a7-4294-4576-a065-\
+8b345e422ba9"],
+
+Cell["Sprawd\:017a te warto\:015bci, podstawiaj\:0105c je do funkcji:", "Text",
+ CellChangeTimes->{{3.4079714915565147`*^9, 3.407971501362074*^9}, {
+   3.783274289830089*^9, 3.783274290534096*^9}, 
+   3.984720256639514*^9},ExpressionUUID->"eedba990-a969-460d-ab8b-\
+6c703f8da23a"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", "x", "]"}], "/.", "solns"}]], "Input",
+ CellChangeTimes->{{3.407971504475314*^9, 
+  3.407971509972991*^9}},ExpressionUUID->"a8b4c64c-49d1-4498-bf0f-\
+6c286eb8bf78"],
+
+Cell["\<\
+To pokazuje jeden z powod\[OAcute]w, dla kt\[OAcute]rych Mathematica\
+\[RegisteredTrademark] przedstawia zbi\[OAcute]r rozwi\:0105za\:0144 w takim \
+formacie: aby maksymalnie u\[LSlash]atwi\[CAcute] podstawianie. \
+Nast\:0119pnie wyczy\:015b\[CAcute] zar\[OAcute]wno zmienn\:0105 f, jak i \
+solns za pomoc\:0105 polecenia Clear:\
+\>", "Text",
+ CellChangeTimes->{{3.4079718050071163`*^9, 3.407971858242304*^9}, {
+   3.597585793125062*^9, 3.597585793901422*^9}, 3.7832737499627733`*^9, {
+   3.783274301407116*^9, 3.7832743348301067`*^9}, {3.783274840811563*^9, 
+   3.783274842035645*^9}, {3.7837028251060343`*^9, 3.78370282510609*^9}, 
+   3.984720264912291*^9},ExpressionUUID->"14e5b651-386c-455c-a4bc-\
+039ba181bd4e"],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", 
+  RowBox[{"f", ",", " ", "solns"}], "]"}]], "Input",
+ CellChangeTimes->{{3.4079718614789677`*^9, 
+  3.407971867872497*^9}},ExpressionUUID->"1fba2aee-eb58-41cc-ac60-\
+2934e6ae59f0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Uk\[LSlash]ady r\[OAcute]wna\:0144", "Section",
+ CellChangeTimes->{{3.407972133883606*^9, 3.407972134916779*^9}, {
+  3.984720273313327*^9, 
+  3.9847202770675583`*^9}},ExpressionUUID->"01857c0e-fd70-49bc-9fcf-\
+f0849e9585cf"],
+
+Cell["\<\
+Tutaj rozwi\:0105\:017cemy uk\[LSlash]ad dw\[OAcute]ch r\[OAcute]wna\:0144: y \
+= 2x - 3 oraz x^2 - 5x + 2xy + y^2 = 6. Najpierw narysujemy ten \
+uk\[LSlash]ad, aby sprawdzi\[CAcute] przybli\:017cone rozwi\:0105zania. U\
+\:017cyjemy do tego nowej metody. Utworzymy i nazwiemy ka\:017cdy wykres \
+osobno (ale na razie wstrzymamy si\:0119 z ich wy\:015bwietleniem \[LongDash] \
+st\:0105d \:015bredniki na ko\:0144cu), a nast\:0119pnie u\:017cyjemy \
+polecenia Show, aby po\[LSlash]\:0105czy\[CAcute] je ze sob\:0105:\
+\>", "Text",
+ CellChangeTimes->{{3.4079721659085712`*^9, 3.407972310683011*^9}, {
+  3.407972992935232*^9, 3.4079730066537027`*^9}, {3.4079730496425037`*^9, 
+  3.407973064780944*^9}, {3.407973098746077*^9, 3.407973101870345*^9}, {
+  3.5975858962157784`*^9, 3.59758589781285*^9}, {3.783273750696559*^9, 
+  3.783273752249009*^9}, {3.783274347453162*^9, 3.783274408121035*^9}, {
+  3.984720284208415*^9, 
+  3.984720286594667*^9}},ExpressionUUID->"e659de7f-101c-460d-8697-\
+fb5d9d7f0ca5"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"gr1", "=", 
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"2", "x"}], "-", "3"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", " ", 
+       RowBox[{"-", "2"}], ",", " ", "4"}], "}"}]}], "]"}]}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.4079727354888973`*^9, 3.407972752561737*^9}, {
+   3.407972888833851*^9, 3.4079728892500973`*^9}, 
+   3.407973013993487*^9},ExpressionUUID->"b6c6c59b-97ed-4c86-9cee-\
+661131583bf2"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"gr2", "=", 
+   RowBox[{"ContourPlot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["x", "2"], "-", 
+       RowBox[{"5", "x"}], "+", " ", 
+       RowBox[{"2", "x", " ", "y"}], " ", "+", " ", 
+       SuperscriptBox["y", "2"]}], "\[Equal]", "6"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", " ", 
+       RowBox[{"-", "2"}], ",", " ", "5"}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", " ", 
+       RowBox[{"-", "5"}], ",", " ", "5"}], "}"}]}], "]"}]}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.407972757224029*^9, 3.407972831530253*^9}, {
+   3.407972880604434*^9, 3.407972881608053*^9}, 
+   3.407973021015751*^9},ExpressionUUID->"e35dbd50-4aa5-4ec8-80fe-\
+e8082782ae87"],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{"gr1", ",", " ", "gr2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.407972837816469*^9, 
+  3.407972845384197*^9}},ExpressionUUID->"41048105-2788-4e5e-9db3-\
+5b0fe8f77c02"],
+
+Cell["\<\
+Aby rozwi\:0105za\[CAcute] ten uk\[LSlash]ad, potrzebujemy listy \
+r\[OAcute]wna\:0144 oraz listy zmiennych, ze wzgl\:0119du na kt\[OAcute]re \
+chcemy go rozwi\:0105za\[CAcute]:\
+\>", "Text",
+ CellChangeTimes->{{3.407973119750456*^9, 3.407973143356887*^9}, {
+   3.775577876202647*^9, 3.775577896328133*^9}, 3.775577942185953*^9, {
+   3.783274413400132*^9, 3.783274413888329*^9}, 
+   3.984720298623147*^9},ExpressionUUID->"38dc3e38-da57-4f2e-af2d-\
+37c5c278e9d8"],
+
+Cell[BoxData[
+ RowBox[{"NSolve", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["x", "2"], "-", 
+       RowBox[{"5", "x"}], "+", 
+       RowBox[{"2", "x", " ", "y"}], "+", 
+       SuperscriptBox["y", "2"]}], "\[Equal]", "6"}], ",", " ", 
+     RowBox[{"y", "\[Equal]", 
+      RowBox[{
+       RowBox[{"2", "x"}], "-", "3"}]}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "y"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.407973145767078*^9, 3.407973192378395*^9}, {
+   3.775577901887121*^9, 3.775577908445215*^9}, 
+   3.775580447035377*^9},ExpressionUUID->"6a289ed3-6be4-4ad3-8154-\
+8b01cddb6ace"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\[CapitalCAcute]wiczenia", "Section",
+ CellChangeTimes->{{3.407973353687538*^9, 3.407973355810639*^9}, {
+   3.7739447227315474`*^9, 3.773944724441251*^9}, 3.775579758035899*^9, {
+   3.984720303626976*^9, 
+   3.984720305144972*^9}},ExpressionUUID->"c80ab99e-7ea0-40f0-9f25-\
+cccaa3e58b45"],
+
+Cell["\<\
+U\:017cyj polecenia NSolve dla funkcji k(x) = x^4 - 6x^3 + 3x + 8. Po zako\
+\:0144czeniu wyczy\:015b\[CAcute] swoj\:0105 funkcj\:0119.\
+\>", "Text",
+ CellChangeTimes->{{3.407971921107903*^9, 3.407971976989265*^9}, {
+   3.407972021188053*^9, 3.4079720452948914`*^9}, 3.407972116996662*^9, 
+   3.691969558898456*^9, {3.77557913796906*^9, 3.7755791475880423`*^9}, {
+   3.783274419634131*^9, 3.783274465433298*^9}, {3.783274874526554*^9, 
+   3.7832748940843573`*^9}, {3.984720318789926*^9, 
+   3.984720323850519*^9}},ExpressionUUID->"a4d22f82-3ae0-45d0-9f0e-\
+9729276b6b56"],
+
+Cell["\<\
+Nast\:0119pnie prze\[CAcute]wiczymy kilka polece\:0144 w ramach jednego d\
+\[LSlash]u\:017cszego zadania.\
+\>", "Text",
+ CellChangeTimes->{{3.4079733601290617`*^9, 3.407973432277261*^9}, {
+   3.77394474459111*^9, 3.773944762243065*^9}, {3.7755791520654993`*^9, 
+   3.775579153055572*^9}, {3.783274468857071*^9, 3.783274469761203*^9}, 
+   3.9847203323028*^9},ExpressionUUID->"d95139aa-20ee-4152-9b4e-c47275294356"],
+
+Cell["\<\
+Rozwa\:017c dwa wielomiany: f(x) = x^4 - 6x^2 + 2x + 5 oraz g(x) = x^3 - 3x + \
+1. Najpierw zdefiniuj obie te funkcje.\
+\>", "Text",
+ CellChangeTimes->{{3.4079734393873177`*^9, 3.407973511962839*^9}, 
+   3.783273753015791*^9, {3.78327447391396*^9, 3.78327451214635*^9}, {
+   3.783274913550507*^9, 3.78327491729455*^9}, {3.783702848457082*^9, 
+   3.783702848457162*^9}, 
+   3.9847203393063383`*^9},ExpressionUUID->"d35993a7-84ee-4d57-b727-\
+bd27b7932bfd"],
+
+Cell["\<\
+Teraz narysuj obie funkcje na wsp\[OAcute]lnym wykresie, dobieraj\:0105c \
+odpowiedni\:0105 dziedzin\:0119. Dodaj opcje, aby \[LSlash]atwiej \
+by\[LSlash]o odr\[OAcute]\:017cni\[CAcute] oba wykresy od siebie.\
+\>", "Text",
+ CellChangeTimes->{{3.407973522703916*^9, 3.407973599546095*^9}, 
+   3.783273753688282*^9, 
+   3.984720344190872*^9},ExpressionUUID->"8f56e666-f9b7-4461-a507-\
+9bc5d054ffaf"],
+
+Cell["\<\
+Teraz spr\[OAcute]buj znale\:017a\[CAcute] punkty przeci\:0119cia \
+r\[OAcute]wna\:0144 za pomoc\:0105 polecenia NSolve.\
+\>", "Text",
+ CellChangeTimes->{{3.407973619212915*^9, 3.407973636894196*^9}, {
+   3.407973668845518*^9, 3.407973698295236*^9}, {3.773950710833074*^9, 
+   3.7739507192030773`*^9}, {3.783274520626124*^9, 3.783274522482181*^9}, 
+   3.9847203509667*^9},ExpressionUUID->"43627383-0c9f-4fbe-bf3e-7bfdf1c825a2"],
+
+Cell["\<\
+Podstaw otrzyman\:0105 list\:0119 rozwi\:0105za\:0144 do funkcji f lub g, aby \
+wyliczy\[CAcute] odpowiadaj\:0105ce im warto\:015bci y. Czy uzyskane pary wsp\
+\[OAcute]\[LSlash]rz\:0119dnych zgadzaj\:0105 si\:0119 z Twoimi \
+przybli\:017ceniami z wykresu?\
+\>", "Text",
+ CellChangeTimes->{{3.40797378512332*^9, 3.407973827856207*^9}, {
+   3.783274527729706*^9, 3.783274543001524*^9}, {3.783702858201097*^9, 
+   3.783702858201171*^9}, 
+   3.984720356606883*^9},ExpressionUUID->"e5af9d1f-8972-4a70-a930-\
+de113adf022e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Zadania domowe", "Section",
+ CellChangeTimes->{{3.9847225942321587`*^9, 
+  3.984722627152837*^9}},ExpressionUUID->"2813823e-2062-4af8-8750-\
+25173f5ebc20"],
+
+Cell["\<\
+1. Zdefiniuj dwie funkcje : f (x) = x^3 \[Minus] 3 x oraz g (x) = 21 \:200bx \
++ 1.
+
+U\:017cyj polecenia Plot, aby narysowa\[CAcute] obie funkcje na jednym \
+wykresie w przedziale x \[Element] [\[Minus]3, 3].
+
+Dodaj opcje stylizacji : niech funkcja f (x) b\:0119dzie narysowana \
+grub\:0105, czerwon\:0105 lini\:0105 (Thick, Red), a funkcja g (x) niebiesk\
+\:0105 lini\:0105 przerywan\:0105 (Dashed, Blue) .
+
+U\:017cyj polecenia NSolve, aby znale\:017a\[CAcute] przybli\:017cone wsp\
+\[OAcute]\[LSlash]rz\:0119dne x punkt\[OAcute]w, w kt\[OAcute]rych te dwie \
+funkcje si\:0119 przecinaj\:0105 (czyli gdzie f (x) == g (x)) .\
+\>", "Text",
+ CellChangeTimes->{{3.9847226298834248`*^9, 3.984722631049284*^9}, {
+   3.9847228089663277`*^9, 3.9847228482886744`*^9}, {3.984722890589024*^9, 
+   3.984722893484992*^9}, 
+   3.984723010595106*^9},ExpressionUUID->"2808c100-8ec5-4ff6-9ef1-\
+41571de7ffbe"],
+
+Cell["\<\
+2.  J\:0119zyk Wolfram Language \:015bwietnie radzi sobie z \
+r\[OAcute]wnaniami, kt\[OAcute]rych nie da si\:0119 \[LSlash]atwo zapisa\
+\[CAcute] jako funkcj\:0119 jawn\:0105 y=f(x).
+
+U\:017cyj polecenia ContourPlot, aby narysowa\[CAcute] krzyw\:0105 \
+zdefiniowan\:0105 r\[OAcute]wnaniem: x^2+2y^2\[Minus]3xy=6.
+
+Dobierz dziedzin\:0119 wykresu tak, aby x i y zmienia\[LSlash]y si\:0119 w \
+przedziale od \[Minus]5 do 5.\
+\>", "Text",
+ CellChangeTimes->{{3.984722854352557*^9, 3.984722901996685*^9}, {
+  3.984722978051442*^9, 
+  3.984723001939045*^9}},ExpressionUUID->"24d991bb-2bd7-4a6f-bf03-\
+72306801e390"],
+
+Cell["\<\
+3. U\:017cyj polecenia Manipulate, aby stworzy\[CAcute] interaktywny wykres \
+funkcji y=a cos(k x).
+
+Wykres funkcji (u\:017cywaj\:0105c polecenia Plot) powinien by\[CAcute] \
+rysowany dla x w przedziale od 0 do 2\[Pi].
+
+Stw\[OAcute]rz dwa suwaki:
+
+    -Parametr a (amplituda) zmieniaj\:0105cy si\:0119 od 1 do 4.
+
+    -Parametr k (cz\:0119stotliwo\:015b\[CAcute]) zmieniaj\:0105cy si\:0119 \
+od 1 do 5.\
+\>", "Text",
+ CellChangeTimes->{{3.9847229043038597`*^9, 
+  3.9847229577157583`*^9}},ExpressionUUID->"f32e72f6-0f1f-45f7-8780-\
+d054b175a902"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{716, 762},
+WindowMargins->{{-3, Automatic}, {Automatic, 0}},
+DefaultNaturalLanguage->"Polish",
+FrontEndVersion->"14.3 for Mac OS X ARM (64-bit) (July 8, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"960fc106-c220-4381-8197-6e6f66ecfa45"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 393, 7, 107, "Title",ExpressionUUID->"5cbf03e8-3f5a-4a05-b82d-5e518fd3e356"],
+Cell[972, 31, 950, 16, 107, "Author",ExpressionUUID->"0da5cdef-f2d9-482b-950a-6c91ef2fc2a5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1959, 52, 380, 7, 107, "Title",ExpressionUUID->"f498c615-bff3-4d6e-896b-603833f681e8"],
+Cell[CellGroupData[{
+Cell[2364, 63, 264, 4, 66, "Section",ExpressionUUID->"6cba7b18-0de9-4000-a304-c1d865cdefdb"],
+Cell[2631, 69, 546, 10, 55, "Text",ExpressionUUID->"58a23d34-f1a7-4d7e-b403-ac2d050e807f"],
+Cell[3180, 81, 876, 14, 77, "Text",ExpressionUUID->"cc30dfb0-3e76-426e-8f9b-b2f1761a8463"],
+Cell[4059, 97, 380, 11, 29, "Input",ExpressionUUID->"eb1b6211-f537-4870-aa4b-9ded7ce86a2d"],
+Cell[4442, 110, 1094, 17, 143, "Text",ExpressionUUID->"098b4b8a-1003-4a94-83a6-567c69f3b68f"],
+Cell[5539, 129, 456, 12, 29, "Input",ExpressionUUID->"6e54989c-2377-404f-a1d3-f22ea1fc5131"],
+Cell[5998, 143, 559, 16, 29, "Input",ExpressionUUID->"bd48708e-d7da-4dd5-92b2-4f0117c70607"],
+Cell[6560, 161, 525, 13, 29, "Input",ExpressionUUID->"8890d708-afaf-4512-ad16-c70e78bcf471"],
+Cell[7088, 176, 622, 19, 33, "Text",ExpressionUUID->"c8bff6a6-457e-4ab1-bcce-56f3093b2bdd"],
+Cell[7713, 197, 637, 16, 29, "Input",ExpressionUUID->"6d9785a5-45b2-4b5e-8196-278fbc8d4563"],
+Cell[8353, 215, 689, 18, 29, "Input",ExpressionUUID->"eadc7ed0-4b91-4868-83f3-594f44cc15ff"],
+Cell[9045, 235, 820, 22, 49, "Input",ExpressionUUID->"4947a2bf-6c81-4c8c-a0e9-8ce72f05e346"],
+Cell[9868, 259, 727, 19, 29, "Input",ExpressionUUID->"a7458e42-5e22-4245-bcee-529f2546efbe"],
+Cell[10598, 280, 388, 8, 33, "Text",ExpressionUUID->"aef6c94a-c64c-4c74-861e-17331f9e408e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11023, 293, 205, 4, 66, "Section",ExpressionUUID->"329940c4-35d4-4b93-8ad3-e75cc78417ae"],
+Cell[11231, 299, 1397, 21, 121, "Text",ExpressionUUID->"2d881a5a-db1a-4d11-b9a0-7e965a104212"],
+Cell[12631, 322, 715, 12, 77, "Text",ExpressionUUID->"5f34283e-66c6-4bfc-8b5f-407f07e43985"],
+Cell[13349, 336, 422, 8, 55, "Text",ExpressionUUID->"6122e210-313b-4696-b7fb-b96138174d5e"],
+Cell[13774, 346, 248, 4, 33, "Text",ExpressionUUID->"83381f8c-018c-4636-9cd4-618aedfca9d2"],
+Cell[14025, 352, 189, 4, 29, "Input",ExpressionUUID->"77c6c2d3-427c-453d-9ae0-a43bd586eca0"],
+Cell[14217, 358, 387, 8, 55, "Text",ExpressionUUID->"feebe054-7bdd-421c-b610-12423fd1b883"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14641, 371, 274, 4, 66, "Section",ExpressionUUID->"51650f9b-1a0d-4044-8485-d261060998d8"],
+Cell[14918, 377, 383, 8, 33, "Text",ExpressionUUID->"6f43c5bf-7373-418f-8ded-0d0b1c89266c"],
+Cell[15304, 387, 528, 16, 31, "Input",ExpressionUUID->"3310ddaf-669c-4246-bc20-48189213343a"],
+Cell[15835, 405, 557, 10, 55, "Text",ExpressionUUID->"a1e335eb-0030-4455-b112-fd373cf23aac"],
+Cell[16395, 417, 739, 20, 31, "Input",ExpressionUUID->"011beac5-20af-4f6b-afe4-9c7ec86e0d2d"],
+Cell[17137, 439, 382, 7, 55, "Text",ExpressionUUID->"a4968a16-c72b-4322-b11c-1e694ba2ea57"],
+Cell[17522, 448, 941, 26, 53, "Input",ExpressionUUID->"e741ce0e-c8dc-486f-bc77-db815cf605e3"],
+Cell[18466, 476, 616, 10, 77, "Text",ExpressionUUID->"a3e57769-1587-4796-9071-83be44188e6f"],
+Cell[19085, 488, 975, 29, 74, "Input",ExpressionUUID->"cc5b05a7-2287-4e91-ae23-872124d89187"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20097, 522, 202, 4, 66, "Section",ExpressionUUID->"84630a73-c111-4c33-a1a7-b5294403f785"],
+Cell[20302, 528, 1191, 25, 77, "Text",ExpressionUUID->"0b82d5e1-c683-453e-bb3b-8c4e1e0ba18a"],
+Cell[21496, 555, 631, 11, 77, "Text",ExpressionUUID->"8240a369-addb-46c9-9308-c6dc4699c3f6"],
+Cell[22130, 568, 625, 18, 29, "Input",ExpressionUUID->"b173feb4-4842-41d6-9f06-5d2caf46dd28"],
+Cell[22758, 588, 832, 18, 55, "Text",ExpressionUUID->"d028c608-0009-4af4-92b8-1b7f54751d55"],
+Cell[23593, 608, 628, 16, 29, "Input",ExpressionUUID->"b20c9a84-7e03-4a47-9e88-bf167944a86c"],
+Cell[24224, 626, 269, 5, 33, "Text",ExpressionUUID->"5dbea51d-8783-43cd-bde2-0550488cacaf"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24530, 636, 276, 5, 66, "Section",ExpressionUUID->"2ab8da3d-9446-4bd4-91e8-1a71c04383db"],
+Cell[24809, 643, 1117, 20, 77, "Text",ExpressionUUID->"f51e92ec-c56c-45e8-9e89-56fffa70dcd8"],
+Cell[25929, 665, 412, 11, 45, "Input",ExpressionUUID->"a6d6e4c8-0001-423d-a5b0-1564dc2f1b75"],
+Cell[26344, 678, 450, 10, 29, "Input",ExpressionUUID->"106f6a38-4b02-44be-9363-eaac2efae0d4"],
+Cell[26797, 690, 291, 6, 55, "Text",ExpressionUUID->"215b9472-fe24-4d92-a188-861a35daa330"],
+Cell[27091, 698, 1431, 36, 70, "Input",ExpressionUUID->"8f2146e2-7834-4b1d-9a6a-610aa212d60a"],
+Cell[28525, 736, 638, 14, 55, "Text",ExpressionUUID->"b2eb57e2-8d91-41b8-87b9-e2f208b4de65"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29200, 755, 422, 6, 66, "Section",ExpressionUUID->"c942e739-bb39-4a6d-acf0-916af8b85009"],
+Cell[CellGroupData[{
+Cell[29647, 765, 255, 4, 53, "Subsection",ExpressionUUID->"8db531fd-103a-4b7c-bb8d-235f5d90ea10"],
+Cell[29905, 771, 425, 11, 33, "Text",ExpressionUUID->"fabaf50c-e4b6-4cbd-93fc-ff57049323e9"],
+Cell[30333, 784, 393, 10, 29, "Input",ExpressionUUID->"c1c5ae65-6a7a-4809-96dd-19eed3acaec5"],
+Cell[30729, 796, 859, 14, 121, "Text",ExpressionUUID->"69f7191d-6de3-4123-b70d-4e18459516c5"],
+Cell[31591, 812, 563, 10, 55, "Text",ExpressionUUID->"c60fa3cf-4884-460c-b608-80c8d4121383"],
+Cell[32157, 824, 582, 13, 29, "Input",ExpressionUUID->"c6bfc823-f911-47a9-9823-efda273ea8ab"],
+Cell[32742, 839, 476, 9, 55, "Text",ExpressionUUID->"1c78482c-fd59-4ced-b217-d0ae28cf0a3c"],
+Cell[33221, 850, 827, 19, 49, "Input",ExpressionUUID->"ebf4519e-0b60-4867-af17-8030b809a0da"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34085, 874, 162, 3, 53, "Subsection",ExpressionUUID->"af62c270-e618-4739-9ba1-9b0e297e7e55"],
+Cell[34250, 879, 333, 7, 33, "Text",ExpressionUUID->"f4dac7d1-b060-4ef4-bbd8-2acb2ff4f49c"],
+Cell[34586, 888, 788, 20, 29, "Input",ExpressionUUID->"35314cd1-f63b-4d11-82d7-68c28860dc03"],
+Cell[35377, 910, 825, 20, 49, "Input",ExpressionUUID->"53e47051-617b-467f-acd3-c36e39a8bd19"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36251, 936, 263, 4, 66, "Section",ExpressionUUID->"57d00cee-afd5-48f5-ab7a-1b53589036c1"],
+Cell[36517, 942, 1251, 19, 143, "Text",ExpressionUUID->"6fe1cf42-e6bd-4dad-981f-f6e5e492d6b3"],
+Cell[37771, 963, 446, 8, 55, "Text",ExpressionUUID->"ac08d128-7ab0-4e34-b42a-4d999806324c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38254, 976, 317, 5, 66, "Section",ExpressionUUID->"b15d5882-838e-49ff-937b-0c2cffebd8cc"],
+Cell[38574, 983, 1024, 16, 99, "Text",ExpressionUUID->"238aeeec-6ca1-4c2a-b9a1-fa187b7bc111"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39647, 1005, 413, 7, 96, "Title",ExpressionUUID->"ad64e23a-f6de-4334-b0e0-f93091d04475"],
+Cell[40063, 1014, 938, 18, 77, "Text",ExpressionUUID->"f30b9e8d-6886-4fa0-9511-588c8e764c11"],
+Cell[41004, 1034, 583, 16, 29, "Input",ExpressionUUID->"0f3fa754-790b-495d-9bc0-8fafbadf498b"],
+Cell[41590, 1052, 774, 13, 77, "Text",ExpressionUUID->"3a1e4af8-0827-4819-942b-6fa8ce2a750e"],
+Cell[42367, 1067, 731, 17, 29, "Input",ExpressionUUID->"52586169-13be-46f8-bbfc-ddf408c1a3f5"],
+Cell[43101, 1086, 647, 11, 55, "Text",ExpressionUUID->"c64106eb-eff2-4a21-a1c2-12627ce2af40"],
+Cell[43751, 1099, 418, 12, 31, "Input",ExpressionUUID->"b39071b3-b894-4757-a726-110229436e7f"],
+Cell[44172, 1113, 818, 14, 77, "Text",ExpressionUUID->"af592e2a-c750-4b05-ad8b-9ffedb7fd32f"],
+Cell[44993, 1129, 1514, 41, 70, "Input",ExpressionUUID->"3321b200-e1f2-4613-99eb-0bd9e278b3cb"],
+Cell[46510, 1172, 459, 7, 33, "Text",ExpressionUUID->"4b32e7e4-fadf-4574-9b31-7498556744bf"],
+Cell[46972, 1181, 1726, 45, 90, "Input",ExpressionUUID->"a2ffe96c-7d1f-477d-9c90-e88842ef9f87"],
+Cell[CellGroupData[{
+Cell[48723, 1230, 253, 4, 66, "Section",ExpressionUUID->"0d7a55b6-8524-45d0-bb65-789ee07e7bd3"],
+Cell[48979, 1236, 504, 9, 55, "Text",ExpressionUUID->"a8c647b9-957a-4bea-be76-3c6a4b4d925a"],
+Cell[49486, 1247, 422, 8, 55, "Text",ExpressionUUID->"cac08b4f-f0ea-4b25-9784-edaaf37863cf"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49957, 1261, 481, 11, 96, "Title",ExpressionUUID->"f4678af9-63f4-4f38-afc3-c7a29c3ce22b"],
+Cell[50441, 1274, 854, 14, 99, "Text",ExpressionUUID->"e53558c4-cc82-4204-a2dd-f3fcf5addbae"],
+Cell[51298, 1290, 871, 14, 99, "Text",ExpressionUUID->"adc11a4c-5f0d-4db0-8329-ce26cc0a4cc2"],
+Cell[52172, 1306, 861, 14, 99, "Text",ExpressionUUID->"fd0d8968-daf2-420c-809d-7d5f98047f37"],
+Cell[53036, 1322, 869, 14, 77, "Text",ExpressionUUID->"b6f6d57f-6cee-46fb-a27a-e51d798886d0"],
+Cell[53908, 1338, 1270, 24, 252, "Text",ExpressionUUID->"e15db0b7-8d62-452e-84f1-0fee47d8a540"],
+Cell[55181, 1364, 490, 9, 55, "Text",ExpressionUUID->"2c102143-e7ca-4ccc-a949-6c16e47e2b4d"],
+Cell[55674, 1375, 576, 10, 77, "Text",ExpressionUUID->"eab6b9d2-4c56-43aa-bb48-3f36cb30a5ae"],
+Cell[56253, 1387, 685, 12, 77, "Text",ExpressionUUID->"0cfb6f2f-74d6-4469-b77f-e961442c0f12"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[56975, 1404, 560, 9, 96, "Title",ExpressionUUID->"62745951-2569-4026-9112-5deb192d9c6e"],
+Cell[CellGroupData[{
+Cell[57560, 1417, 215, 4, 66, "Section",ExpressionUUID->"38413b12-e694-4222-9c58-868a6bc14026"],
+Cell[57778, 1423, 566, 10, 55, "Text",ExpressionUUID->"93fedf5f-9860-4f6a-97a7-e20a861ed9a7"],
+Cell[58347, 1435, 435, 12, 29, "Input",ExpressionUUID->"871f1d8e-4de6-41ca-b6d3-915c5dba41e4"],
+Cell[58785, 1449, 326, 7, 33, "Text",ExpressionUUID->"71a6a503-6665-4b23-8e56-c885fd9fb181"],
+Cell[59114, 1458, 201, 4, 29, "Input",ExpressionUUID->"59fb63a2-cc00-4a23-ac11-b9e6b435ddd2"],
+Cell[59318, 1464, 313, 5, 33, "Text",ExpressionUUID->"99148f25-61eb-4716-b3df-07c6fd84fa92"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[59668, 1474, 253, 4, 66, "Section",ExpressionUUID->"fe4bed49-79e1-4869-94f6-ef8a044f0690"],
+Cell[59924, 1480, 408, 6, 33, "Text",ExpressionUUID->"fc9766c5-f213-4011-a6b5-4e9b8c51945b"],
+Cell[60335, 1488, 395, 11, 29, "Input",ExpressionUUID->"49a9d477-d371-46a2-9661-35cdbe9ebc7e"],
+Cell[60733, 1501, 535, 15, 42, "Input",ExpressionUUID->"99ae57ef-ce54-4664-98ee-5bd9280d11fe"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[61305, 1521, 280, 4, 66, "Section",ExpressionUUID->"97bc47eb-348d-4821-b0ca-59f81720fdf5"],
+Cell[61588, 1527, 876, 14, 99, "Text",ExpressionUUID->"ea789faa-c0e3-4809-9665-adb92b1af46e"],
+Cell[62467, 1543, 779, 20, 74, "Input",ExpressionUUID->"6f6346b1-eb3d-4ec4-a365-9c0deb1061b7"],
+Cell[63249, 1565, 362, 7, 33, "Text",ExpressionUUID->"db65a25a-af22-480a-827f-24646790f68e"],
+Cell[63614, 1574, 698, 19, 29, "Input",ExpressionUUID->"bc13ac93-9381-4a13-b2c5-0ff134d78ae9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64349, 1598, 400, 11, 67, "Section",ExpressionUUID->"3f50844f-dbaa-4dff-a206-d17c56aebc13"],
+Cell[64752, 1611, 259, 4, 33, "Text",ExpressionUUID->"c27f8645-ee30-48d1-85f8-118c712de246"],
+Cell[65014, 1617, 189, 5, 32, "Input",ExpressionUUID->"15c26984-121b-46e1-9674-59e7e0ae26b3"],
+Cell[65206, 1624, 478, 12, 31, "Input",ExpressionUUID->"e34f9943-361d-42d6-82f3-a543592ebdf4"],
+Cell[65687, 1638, 999, 15, 99, "Text",ExpressionUUID->"286439f1-2ecd-4352-9115-0a50571cd9c8"],
+Cell[66689, 1655, 386, 10, 29, "Input",ExpressionUUID->"9b8002c8-e9f2-4ad3-9030-494d06e2159c"],
+Cell[67078, 1667, 435, 11, 29, "Input",ExpressionUUID->"53156a34-feb3-4341-b44b-9b5bffaaf009"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[67550, 1683, 315, 5, 66, "Section",ExpressionUUID->"f227fd03-e6f9-46a9-841a-80b56eecf15a"],
+Cell[67868, 1690, 1339, 20, 164, "Text",ExpressionUUID->"6713821e-86fb-4c97-a75d-8e2641f07206"],
+Cell[69210, 1712, 380, 6, 33, "Text",ExpressionUUID->"eabd8806-6050-4859-8df9-7a49524268b7"],
+Cell[69593, 1720, 175, 4, 29, "Input",ExpressionUUID->"f2c9e2be-fb16-48ae-ad9a-6f8d84a04571"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[69805, 1729, 218, 4, 66, "Section",ExpressionUUID->"4e0b1829-347d-4740-b71d-f0cb3d91c7e1"],
+Cell[70026, 1735, 569, 10, 55, "Text",ExpressionUUID->"78399338-8d57-424c-8a83-1e140afce13a"],
+Cell[70598, 1747, 480, 9, 33, "Text",ExpressionUUID->"82b6a072-8cf3-4149-9688-279b38406277"],
+Cell[71081, 1758, 942, 15, 143, "Text",ExpressionUUID->"f98b1dcc-e400-4b99-a09d-61f936c07db5"],
+Cell[72026, 1775, 448, 9, 55, "Text",ExpressionUUID->"fb06027e-4ee4-4ad2-bd35-4072969ef071"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[72523, 1790, 326, 5, 96, "Title",ExpressionUUID->"6c399e13-4dc1-4ab8-a750-15c892a817ce"],
+Cell[CellGroupData[{
+Cell[72874, 1799, 204, 4, 66, "Section",ExpressionUUID->"21a9b20b-05f4-46de-8f90-80cef430bb49"],
+Cell[73081, 1805, 652, 15, 55, "Text",ExpressionUUID->"2a33bf2e-753e-4121-ab43-57092564ea9f"],
+Cell[73736, 1822, 309, 9, 31, "Input",ExpressionUUID->"765f9457-91dc-4451-b38f-3b48090fabc6"],
+Cell[74048, 1833, 311, 9, 31, "Input",ExpressionUUID->"5efb3ff7-e2ff-4df8-aadf-9d2d4a442597"],
+Cell[74362, 1844, 399, 12, 31, "Input",ExpressionUUID->"b730df56-3f42-41fe-8408-0ae27b75de46"],
+Cell[74764, 1858, 269, 4, 33, "Text",ExpressionUUID->"eacfe262-45a4-4617-b382-da44ca12b681"],
+Cell[75036, 1864, 400, 12, 31, "Input",ExpressionUUID->"458b8145-3b54-4c3a-bf21-e45b506778ee"],
+Cell[75439, 1878, 438, 8, 33, "Text",ExpressionUUID->"5d37e072-1684-4548-be63-edc5c68ed400"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[75914, 1891, 261, 4, 66, "Section",ExpressionUUID->"3db819a9-7e0e-44d9-b43b-4951242ba81a"],
+Cell[76178, 1897, 325, 7, 33, "Text",ExpressionUUID->"c229262c-9890-410b-8c33-93e74c203885"],
+Cell[76506, 1906, 384, 11, 31, "Input",ExpressionUUID->"380a377d-c3ba-41bd-98fe-2cc4dcabcfce"],
+Cell[76893, 1919, 807, 13, 99, "Text",ExpressionUUID->"fe5a364d-99e3-46d2-a767-9f90a6f209e3"],
+Cell[77703, 1934, 454, 11, 31, "Input",ExpressionUUID->"2c678e08-e9cd-4845-bfb5-87d7aa38acbe"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[78194, 1950, 300, 4, 66, "Section",ExpressionUUID->"cdd4553b-97d2-47d1-b495-a1d9f60fe97b"],
+Cell[78497, 1956, 336, 10, 31, "Input",ExpressionUUID->"56a7e3e2-2e6e-4c7f-bc4e-24dc6e391ac4"],
+Cell[78836, 1968, 1141, 18, 121, "Text",ExpressionUUID->"983318a4-2f2d-4869-a865-d1cb7afc63e2"],
+Cell[79980, 1988, 417, 11, 33, "Text",ExpressionUUID->"14c95709-b894-4223-9c04-1ffc42d74b05"],
+Cell[80400, 2001, 438, 11, 31, "Input",ExpressionUUID->"ef143827-99da-412d-a401-36acd2d3c51c"],
+Cell[80841, 2014, 368, 12, 34, "Input",ExpressionUUID->"9eb34d1f-dda2-4780-a9d7-7189ef4eb5b9"],
+Cell[81212, 2028, 199, 3, 33, "Text",ExpressionUUID->"1fcaa4b5-4561-49f3-827a-36ea461fee61"],
+Cell[81414, 2033, 284, 4, 33, "Text",ExpressionUUID->"3354d9cb-5dc4-4558-ac98-369d0c59ea5a"],
+Cell[81701, 2039, 305, 9, 29, "Input",ExpressionUUID->"9643365a-f097-4d5d-aacd-319332d0d68b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[82043, 2053, 257, 4, 66, "Section",ExpressionUUID->"9a1b08bb-f5fc-430b-bcf2-7c7a1e1511af"],
+Cell[82303, 2059, 1059, 17, 121, "Text",ExpressionUUID->"ca257299-0049-4346-a988-32ce21197d00"],
+Cell[83365, 2078, 387, 11, 29, "Input",ExpressionUUID->"daa260de-122c-4afb-a10e-fc56c03925b4"],
+Cell[83755, 2091, 373, 8, 33, "Text",ExpressionUUID->"cd4def8c-736a-4cba-a91a-8e93aceebe23"],
+Cell[84131, 2101, 381, 10, 29, "Input",ExpressionUUID->"984454b7-0775-4952-ac83-e2e696cd87b9"],
+Cell[84515, 2113, 995, 16, 77, "Text",ExpressionUUID->"fbacdb19-6745-4491-be73-c726b704a599"],
+Cell[85513, 2131, 623, 18, 29, "Input",ExpressionUUID->"1c0120f7-c410-40d6-a685-5bdc4c4b0e5a"],
+Cell[86139, 2151, 494, 13, 29, "Input",ExpressionUUID->"955903a9-dc38-475d-b95e-d86dec949b41"],
+Cell[86636, 2166, 484, 9, 33, "Text",ExpressionUUID->"1568af90-aa1d-4ccd-b2aa-85a04c984330"],
+Cell[87123, 2177, 453, 12, 29, "Input",ExpressionUUID->"ed7399f3-d905-430a-9bb7-aa0cee07dabd"],
+Cell[87579, 2191, 738, 12, 55, "Text",ExpressionUUID->"5c29e1ce-25ce-43ae-a671-4453e9ee80ee"],
+Cell[88320, 2205, 211, 5, 29, "Input",ExpressionUUID->"a3f20007-f116-4cc0-8c1e-f290e49e60a8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[88568, 2215, 206, 4, 66, "Section",ExpressionUUID->"0dcfc362-941f-4474-97f3-c79dbcff3c07"],
+Cell[88777, 2221, 352, 5, 33, "Text",ExpressionUUID->"c2488b8f-2f1b-4c9c-9957-0f2393def7a9"],
+Cell[89132, 2228, 403, 12, 29, "Input",ExpressionUUID->"791d9468-d971-4f69-846f-6fbd1cfa157d"],
+Cell[89538, 2242, 275, 4, 33, "Text",ExpressionUUID->"a5a84f17-0f5d-42e1-983f-a2f2f71b7c88"],
+Cell[89816, 2248, 307, 9, 29, "Input",ExpressionUUID->"375622a7-4294-4576-a065-8b345e422ba9"],
+Cell[90126, 2259, 280, 4, 33, "Text",ExpressionUUID->"eedba990-a969-460d-ab8b-6c703f8da23a"],
+Cell[90409, 2265, 208, 5, 29, "Input",ExpressionUUID->"a8b4c64c-49d1-4498-bf0f-6c286eb8bf78"],
+Cell[90620, 2272, 726, 12, 77, "Text",ExpressionUUID->"14e5b651-386c-455c-a4bc-039ba181bd4e"],
+Cell[91349, 2286, 218, 5, 29, "Input",ExpressionUUID->"1fba2aee-eb58-41cc-ac60-2934e6ae59f0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[91604, 2296, 230, 4, 66, "Section",ExpressionUUID->"01857c0e-fd70-49bc-9fcf-f0849e9585cf"],
+Cell[91837, 2302, 1008, 16, 99, "Text",ExpressionUUID->"e659de7f-101c-460d-8697-fb5d9d7f0ca5"],
+Cell[92848, 2320, 480, 14, 29, "Input",ExpressionUUID->"b6c6c59b-97ed-4c86-9cee-661131583bf2"],
+Cell[93331, 2336, 755, 21, 31, "Input",ExpressionUUID->"e35dbd50-4aa5-4ec8-80fe-e8082782ae87"],
+Cell[94089, 2359, 215, 5, 29, "Input",ExpressionUUID->"41048105-2788-4e5e-9db3-5b0fe8f77c02"],
+Cell[94307, 2366, 472, 9, 55, "Text",ExpressionUUID->"38dc3e38-da57-4f2e-af2d-37c5c278e9d8"],
+Cell[94782, 2377, 671, 19, 58, "Input",ExpressionUUID->"6a289ed3-6be4-4ad3-8154-8b01cddb6ace"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[95490, 2401, 294, 5, 65, "Section",ExpressionUUID->"c80ab99e-7ea0-40f0-9f25-cccaa3e58b45"],
+Cell[95787, 2408, 580, 10, 55, "Text",ExpressionUUID->"a4d22f82-3ae0-45d0-9f0e-9729276b6b56"],
+Cell[96370, 2420, 423, 7, 33, "Text",ExpressionUUID->"d95139aa-20ee-4152-9b4e-c47275294356"],
+Cell[96796, 2429, 464, 9, 55, "Text",ExpressionUUID->"d35993a7-84ee-4d57-b727-bd27b7932bfd"],
+Cell[97263, 2440, 407, 8, 55, "Text",ExpressionUUID->"8f56e666-f9b7-4461-a507-9bc5d054ffaf"],
+Cell[97673, 2450, 437, 7, 33, "Text",ExpressionUUID->"43627383-0c9f-4fbe-bf3e-7bfdf1c825a2"],
+Cell[98113, 2459, 527, 10, 55, "Text",ExpressionUUID->"e5af9d1f-8972-4a70-a930-de113adf022e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[98677, 2474, 161, 3, 65, "Section",ExpressionUUID->"2813823e-2062-4af8-8750-25173f5ebc20"],
+Cell[98841, 2479, 903, 19, 208, "Text",ExpressionUUID->"2808c100-8ec5-4ff6-9ef1-41571de7ffbe"],
+Cell[99747, 2500, 619, 14, 143, "Text",ExpressionUUID->"24d991bb-2bd7-4a6f-bf03-72306801e390"],
+Cell[100369, 2516, 556, 16, 208, "Text",ExpressionUUID->"f32e72f6-0f1f-45f7-8780-d054b175a902"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
