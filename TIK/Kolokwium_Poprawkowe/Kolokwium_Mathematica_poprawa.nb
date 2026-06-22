@@ -1,0 +1,326 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     11975,        318]
+NotebookOptionsPosition[      9434,        274]
+NotebookOutlinePosition[      9841,        290]
+CellTagsIndexPosition[      9798,        287]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{{3.991030076926796*^9, 
+  3.9910300780403385`*^9}},ExpressionUUID->"4a65722a-d97f-c24f-bad8-\
+f8d3405d6c87"],
+
+Cell[CellGroupData[{
+
+Cell["Kolokwium poprawkowe Mathematica 22.06.2026", "Title",
+ CellChangeTimes->{{3.99103013231962*^9, 
+  3.9910301453814716`*^9}},ExpressionUUID->"ac8d8243-3de7-6c4c-adcc-\
+6e0529200ec0"],
+
+Cell[CellGroupData[{
+
+Cell["Zadanie 1 - Analiza funkcji, wykresy i uk\[LSlash]ady r\[OAcute]wna\
+\:0144", "Chapter",
+ CellChangeTimes->{{3.99103016406822*^9, 
+  3.9910301965490074`*^9}},ExpressionUUID->"1de6a040-d9b3-f944-a078-\
+744c09923316"],
+
+Cell[TextData[{
+ "\nDana jest funkcja:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", 
+    RowBox[{
+     SuperscriptBox["e", 
+      RowBox[{"-", "x"}]], " ", 
+     RowBox[{"sin", "(", 
+      RowBox[{"3", "x"}], ")"}]}]}], TraditionalForm]],ExpressionUUID->
+  "f892ec59-419a-4645-9704-b2e6905daca2"],
+ "\n\na) Zdefiniuj t\:0119 funkcj\:0119 i narysuj jej wykres dla \
+x\[Element][0,5]. Dodaj tytu\[LSlash] wykresu. (0.75 pkt)\n\nb) Dodaj \
+etykiety osi. (0.75 pkt)\n\nc) Dodaj legend\:0119 opisuj\:0105c\:0105 obie \
+funkcje. (0.75 pkt)\n\nd) Oblicz warto\:015b\[CAcute] pierwszej pochodnej \
+funkcji w punkcie x=1. (0.75 pkt)\n\ne) Oblicz ca\[LSlash]k\:0119 oznaczon\
+\:0105 funkcji na przedziale [0,5]. (0.75 pkt)"
+}], "Text",
+ CellChangeTimes->{
+  3.991030118849325*^9, {3.991030191664747*^9, 3.991030195632248*^9}, {
+   3.991030336365118*^9, 3.991030355907305*^9}, {3.9910339491840305`*^9, 
+   3.991033958510744*^9}, {3.991034198388775*^9, 
+   3.9910342064696083`*^9}},ExpressionUUID->"ac8dfff6-9e00-714d-b387-\
+0f3f91112ca2"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"miejsce", " ", "na", " ", "rozwi\:0105zanie"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.9910304531547623`*^9, 
+  3.991030464538723*^9}},ExpressionUUID->"ea997ee8-210c-6741-94ff-\
+707f47c1941a"],
+
+Cell[TextData[{
+ "f) Rozwi\:0105\:017c poni\:017cszy uk\[LSlash]ad r\[OAcute]wna\:0144 i \
+wyznacz wszystkie rozwi\:0105zania. (1 pkt):\n\n",
+ Cell[BoxData[{
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "2"], "+", 
+     SuperscriptBox["y", "2"]}], "=", "16"}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{"y", "=", 
+    RowBox[{"x", "+", "2"}]}], TraditionalForm]}],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "3b5347a5-afb0-c04a-b401-8bd9c7da2c1e"]
+}], "Text",
+ CellChangeTimes->{{3.991030489208212*^9, 3.9910304911895714`*^9}, {
+   3.9910338104908104`*^9, 3.9910338506216564`*^9}, {3.991034071056505*^9, 
+   3.9910340776668377`*^9}, {3.9910342090281563`*^9, 3.9910342091656017`*^9}, 
+   3.9910343924064426`*^9},ExpressionUUID->"0f73da0a-3e8e-a94a-8129-\
+63a019bb48e9"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"miejsce", " ", "na", " ", "rozwi\:0105zanie"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.9910338534818954`*^9, 3.9910338555441895`*^9}, 
+   3.9910338885973053`*^9},ExpressionUUID->"566b9343-8310-f04c-9f4e-\
+47236880487e"],
+
+Cell["g) Wyczy\:015b\[CAcute] u\:017cyte zmienne. (0.25 pkt)", "Text",
+ CellChangeTimes->{
+  3.991034132370247*^9, {3.9910342206085224`*^9, 
+   3.9910342216337967`*^9}},ExpressionUUID->"41ddd9f3-b3d3-b149-becc-\
+b25cb265e367"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"miejsce", " ", "na", " ", "rozwi\:0105zanie"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.991034146996132*^9, 3.9910341479621944`*^9}, 
+   3.991034401058071*^9},ExpressionUUID->"14cb0c9d-a22f-c849-b795-\
+9ab882b12c9c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Zadanie 2 - Macierze i listy", "Chapter",
+ CellChangeTimes->{{3.9910342337385254`*^9, 3.991034248288994*^9}, {
+  3.9910345354529305`*^9, 
+  3.991034536664036*^9}},ExpressionUUID->"19f8a0cc-e036-5a41-aef6-\
+4514d1cf5fee"],
+
+Cell[TextData[{
+ "a) Zdefiniuj macierze (0.5 pkt):\nA - w pierwszym wierszu ma 2 oraz 1, a w \
+drugim 5 oraz 3\n\nB - w pierwszym wierszu ma 1 oraz -2, a w drugim 4 oraz 0\n\
+\nb) Wyznacz wyznacznik macierzy A, ",
+ StyleBox["zdiagonalizuj",
+  IgnoreSpellCheck->True],
+ " macierz A oraz iloczyn ",
+ StyleBox["zdiagonalizowanego",
+  IgnoreSpellCheck->True],
+ " A\:22c5B. (1.5 pkt)"
+}], "Text",
+ CellChangeTimes->{{3.9910345569382896`*^9, 3.991034636998127*^9}, {
+  3.991073913764673*^9, 
+  3.991073953135584*^9}},ExpressionUUID->"c8284a9e-c19c-5544-9300-\
+f2ba56dcde32"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"miejsce", " ", "na", " ", "rozwi\:0105zanie"}], "*)"}]], "Input",Ex\
+pressionUUID->"7cffd858-08bc-244a-a071-d45370966ae9"],
+
+Cell["\<\
+c) Za pomoc\:0105 funkcji Table wygeneruj list\:0119 kwadrat\[OAcute]w liczb \
+ca\[LSlash]kowitych od 1 do 20. (1.5 pkt)
+
+d) Korzystaj\:0105c z funkcji Map, zwi\:0119ksz ka\:017cdy element otrzymanej \
+listy o 7. (1.25 pkt)\
+\>", "Text",
+ CellChangeTimes->{
+  3.9910349267978516`*^9},ExpressionUUID->"819a7b46-dc82-2a4f-9b8d-\
+a8522582ad89"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"miejsce", " ", "na", " ", "rozwi\:0105zanie"}], "*)"}]], "Input",Ex\
+pressionUUID->"73f13e1f-20d9-554f-b1c0-cbce7413354e"],
+
+Cell["e) Wyczy\:015b\[CAcute] u\:017cyte zmienne. (0.25 pkt)", "Text",
+ CellChangeTimes->{{3.991034940972727*^9, 
+  3.9910349432055607`*^9}},ExpressionUUID->"11b9d0b3-23e1-e44e-ba1e-\
+1cfd8a35fe53"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"miejsce", " ", "na", " ", "rozwi\:0105zanie"}], "*)"}]], "Input",Ex\
+pressionUUID->"36e5c877-d1ff-3642-bf73-a5cdb1ed27a7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Zadanie 3 - 3D plot i dopasowywanie funkcji", "Chapter",
+ CellChangeTimes->{{3.9910349552359123`*^9, 
+  3.991034966916971*^9}},ExpressionUUID->"3f66184c-50e0-3a44-a620-\
+26b605d1800b"],
+
+Cell[TextData[{
+ "Dana jest funkcja dw\[OAcute]ch zmiennych:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"z", "(", 
+     RowBox[{"x", ",", "y"}], ")"}], "=", 
+    RowBox[{"50", "-", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"x", "-", "1"}], ")"}], "2"], "-", 
+     RowBox[{"2", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"y", "+", "1"}], ")"}], "2"]}], "+", 
+     RowBox[{"10", 
+      RowBox[{"sin", "(", "xy", ")"}]}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "88132b60-23ca-3b42-b4c2-58693ede8a09"],
+ "\n\na) Zdefiniuj funkcj\:0119 i wykonaj wykres 3D dla tego zakresu i Dodaj \
+etykiety osi oraz zastosuj dowoln\:0105 funkcj\:0119 kolorowania. (1 pkt):\n\n\
+x\[Element][\[Minus]4,4],y\[Element][\[Minus]4,4]\n\nb) Wygeneruj map\:0119 \
+konturow\:0105 dla tego samego obszaru z 12 poziomicami. (1 pkt)\n\nc) \
+Wyznacz maksimum funkcji w zadanym obszarze oraz zaznacz znaleziony punkt na \
+wykresie 3D. (1.5 pkt)"
+}], "Text",
+ CellChangeTimes->{{3.991035003078745*^9, 
+  3.991035109910658*^9}},ExpressionUUID->"0206dc59-331c-1845-9407-\
+d44324c0ddf3"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"miejsce", " ", "na", " ", "rozwi\:0105zanie"}], "*)"}]], "Input",Ex\
+pressionUUID->"961831af-f4f9-0a48-9c94-7cf4aa0d325c"],
+
+Cell["Na podstawie tych danych:", "Text",
+ CellChangeTimes->{{3.991035125909998*^9, 3.9910351269445896`*^9}, {
+  3.99103519645944*^9, 
+  3.9910352155653915`*^9}},ExpressionUUID->"b0c88398-03af-ab42-a406-\
+abf3730992df"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"dane", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "4"}], ",", "31.5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "3"}], ",", "40.1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "2"}], ",", "45.8"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "49.3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "50.4"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "49.8"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "46.2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "40.5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"4", ",", "32.4"}], "}"}]}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.991035217333252*^9, 
+  3.991035217333252*^9}},ExpressionUUID->"cbf3c898-9047-8243-9d83-\
+5f8e0ef605c3"],
+
+Cell[TextData[{
+ "d) Dopasuj do nich funkcj\:0119 kwadratow\:0105 postaci:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["ax", "2"], " ", "+", " ", "bx", " ", "+", " ", "c"}], 
+   TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "de509a03-7b2a-4041-ab4d-23606fe0e263"],
+ "\n\ni wyznacz warto\:015bci parametr\[OAcute]w a, b oraz c. (1 pkt)\n\ne) \
+Narysuj wsp\[OAcute]lny wykres zawieraj\:0105cy punkty pomiarowe oraz wykres \
+dopasowanej funkcji. (0.5 pkt)"
+}], "Text",
+ CellChangeTimes->{{3.99103524916506*^9, 
+  3.9910352829588585`*^9}},ExpressionUUID->"9008a750-553b-6549-831c-\
+e41808b5b7ba"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"miejsce", " ", "na", " ", "rozwi\:0105zanie"}], "*)"}]], "Input",Ex\
+pressionUUID->"64e0829d-12bf-f84d-9c3b-3f2039bdb003"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{880.5, 624.75},
+WindowMargins->{{363, Automatic}, {Automatic, 159.75}},
+FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"30150e4e-43ee-2848-aeb2-e3b69ba5cd03"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[554, 20, 173, 3, 47, "Input",ExpressionUUID->"4a65722a-d97f-c24f-bad8-f8d3405d6c87"],
+Cell[CellGroupData[{
+Cell[752, 27, 187, 3, 157, "Title",ExpressionUUID->"ac8d8243-3de7-6c4c-adcc-6e0529200ec0"],
+Cell[CellGroupData[{
+Cell[964, 34, 221, 4, 67, "Chapter",ExpressionUUID->"1de6a040-d9b3-f944-a078-744c09923316"],
+Cell[1188, 40, 1065, 24, 314, "Text",ExpressionUUID->"ac8dfff6-9e00-714d-b387-0f3f91112ca2"],
+Cell[2256, 66, 234, 5, 28, "Input",ExpressionUUID->"ea997ee8-210c-6741-94ff-707f47c1941a"],
+Cell[2493, 73, 812, 19, 98, "Text",ExpressionUUID->"0f73da0a-3e8e-a94a-8129-63a019bb48e9"],
+Cell[3308, 94, 261, 5, 28, "Input",ExpressionUUID->"566b9343-8310-f04c-9f4e-47236880487e"],
+Cell[3572, 101, 226, 4, 33, "Text",ExpressionUUID->"41ddd9f3-b3d3-b149-becc-b25cb265e367"],
+Cell[3801, 107, 257, 5, 28, "Input",ExpressionUUID->"14cb0c9d-a22f-c849-b795-9ab882b12c9c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4095, 117, 226, 4, 67, "Chapter",ExpressionUUID->"19f8a0cc-e036-5a41-aef6-4514d1cf5fee"],
+Cell[4324, 123, 568, 14, 143, "Text",ExpressionUUID->"c8284a9e-c19c-5544-9300-f2ba56dcde32"],
+Cell[4895, 139, 163, 3, 28, "Input",ExpressionUUID->"7cffd858-08bc-244a-a071-d45370966ae9"],
+Cell[5061, 144, 351, 9, 77, "Text",ExpressionUUID->"819a7b46-dc82-2a4f-9b8d-a8522582ad89"],
+Cell[5415, 155, 163, 3, 28, "Input",ExpressionUUID->"73f13e1f-20d9-554f-b1c0-cbce7413354e"],
+Cell[5581, 160, 198, 3, 33, "Text",ExpressionUUID->"11b9d0b3-23e1-e44e-ba1e-1cfd8a35fe53"],
+Cell[5782, 165, 163, 3, 28, "Input",ExpressionUUID->"36e5c877-d1ff-3642-bf73-a5cdb1ed27a7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5982, 173, 190, 3, 67, "Chapter",ExpressionUUID->"3f66184c-50e0-3a44-a620-26b605d1800b"],
+Cell[6175, 178, 1127, 28, 271, "Text",ExpressionUUID->"0206dc59-331c-1845-9407-d44324c0ddf3"],
+Cell[7305, 208, 163, 3, 28, "Input",ExpressionUUID->"961831af-f4f9-0a48-9c94-7cf4aa0d325c"],
+Cell[7471, 213, 219, 4, 33, "Text",ExpressionUUID->"b0c88398-03af-ab42-a406-abf3730992df"],
+Cell[7693, 219, 911, 29, 28, "Input",ExpressionUUID->"cbf3c898-9047-8243-9d83-5f8e0ef605c3"],
+Cell[8607, 250, 633, 15, 161, "Text",ExpressionUUID->"9008a750-553b-6549-831c-e41808b5b7ba"],
+Cell[9243, 267, 163, 3, 28, "Input",ExpressionUUID->"64e0829d-12bf-f84d-9c3b-3f2039bdb003"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
